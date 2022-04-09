@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>机器人客服</title>
+	<style type="text/css">
+		body{
+			margin: 0 auto;
+		}
+		#box{
+			width: 1920px;
+			height: 950px;
+			background-color: darkgrey;
+			position: relative;
+			display: block;
+			margin: 0 auto;
+		}
+		#mycanvas{
+			background-color: #00b38a;
+			display: block;
+			position: absolute;
+			bottom: 2%;
+			right: 1%;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<canvas id="mycanvas" width="" height=""></canvas>
+	</div>
+	<script type="text/javascript">
+		const canvas = document.querySelector("mycanvas")
+		const ctx = canvas.getContext("2d")
+		let w = canvas.width = window.innerWidth
+		let h = canvas.height = window.innerHeight
+		//设置canvas为全局宽高
+		window.addEventListener("resize",function(){
+			w = canvas.width = window.innerWidth
+			h = canvas.height = window.innerHeight
+		})
+
+		
+		/*
+			设置若干个小球，不停地围绕鼠标箭头旋转
+		*/
+	   //1.绘制小球,小球数组
+	   // let ballList = []
+	   
+	   // ctx.beginPath()
+	   // ctx.arc()
+		
+		
+		
+		
+	</script>
+</body>
+</html>

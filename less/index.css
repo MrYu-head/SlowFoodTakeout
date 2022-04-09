@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+body .login_regist {
+  height: 100%;
+  display: block;
+  position: relative;
+}
+body .login_regist .container {
+  background-color: #2d3a4c;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+body .login_regist .container form {
+  width: 520px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 160px 35px 0;
+  position: relative;
+  overflow: hidden;
+}
+body .login_regist .container form .form_item_head {
+  margin-bottom: 8%;
+}
+body .login_regist .container form .form_item_head p {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+body .login_regist .container form .form_item {
+  margin-bottom: 4% ;
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-radius: 5px;
+  background-color: #283443;
+}
+body .login_regist .container form .form_item input::-webkit-outer-spin-button,
+body .login_regist .container form .form_item input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+body .login_regist .container form .form_item input[type="number"] {
+  -moz-appearance: textfield;
+}
+body .login_regist .container form .form_item input {
+  height: 50px;
+  font-size: 20px;
+  border: 0;
+  color: #ffffff;
+  display: inline-block;
+  margin: 0;
+  padding: 2px 20px 2px 10px;
+  background-color: #283443;
+  outline: none;
+}
+body .login_regist .container form .form_item span {
+  width: 30px;
+  margin: 0 10px 10px 20px;
+  padding: 0;
+  vertical-align: middle;
+  display: inline-block;
+}
+body .login_regist .container form .form_item span img {
+  width: 70%;
+  height: 70%;
+  vertical-align: middle;
+}
+body .login_regist .container form .form_item #phoneNum,
+body .login_regist .container form .form_item #passNum {
+  width: 80%;
+}
+body .login_regist .container form .form_item #loginBtn {
+  width: 100%;
+  height: 54px;
+  font-size: 1.6em;
+  border-radius: 5px;
+  padding: 0;
+  letter-spacing: 1em;
+}
