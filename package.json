@@ -1,0 +1,27 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "this is a project file",
+  "main": "app.js",
+  "dependencies": {
+    "element-ui": "^2.15.6",
+    "express": "^4.17.3",
+    "less": "^4.1.2",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.2.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrYu-head/----.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrYu-head/----/issues"
+  },
+  "homepage": "https://github.com/MrYu-head/----#readme"
+}

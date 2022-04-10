@@ -1,0 +1,54 @@
+*,
+body,
+.menuBox,
+.menuContainer,
+.menuList {
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #DCDCDC;
+  position: absolute;
+}
+body .menuBox {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: relative;
+}
+body .menuBox .menuContainer {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+body .menuBox .menuContainer .menuList {
+  display: inline;
+  list-style: none;
+}
+body .menuBox .menuContainer .menuList .shop_overview {
+  width: 100%;
+  height: 20%;
+  margin: 0;
+  padding: 0;
+  background-color: aqua;
+  display: inline-block;
+  list-style: none;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe {
+  border: 0;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe {
+  width: 30%;
+  background-color: black;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .right_discribe {
+  width: 70%;
+  background-color: purple;
+}
