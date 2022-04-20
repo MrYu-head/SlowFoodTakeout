@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.fl{float: left;}
+.fr{float: right;}
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	float: left;
+	display: block;
+}
+.container{
+	width: 100%;
+	height: 950px;
+	margin: 0;
+	position: absolute;
+}
+.container .left_bar{
+	width: 16%;
+	height: 100%;
+	float: left;
+	margin: 0;
+	position: relative;
+	background-color: lightgoldenrodyellow;
+}
+
+
+.container .right_screen{
+	width: 84%;
+	height: 100%;
+	float: right;
+	background-color: floralwhite;
+	position: relative;
+}
+.container .right_screen .control_nav{
+	width: 100%;
+	height: 50px;
+	background-color: #00B38A;
+	float: left;
+	position: relative;
+}
+.container .right_screen .control_nav p{
+	margin: 0;
+	text-align: center;
+	line-height: 50px;
+}
+.container .right_screen .control_nav .page_one{
+	font-size: 20px;
+	color: whitesmoke;
+	margin-left: 10px;
+	font-weight: 600;
+}
+.container .right_screen .control_nav .change_language{
+	width: 160px;
+	height: 50px;
+	margin-left: 1200px;
+	position: absolute;
+}
+.container .right_screen .control_nav .change_language .change_language_list{
+	width: 160px;
+	height: 50px;
+	margin-left: 1200px;
+	position: relative;
+}
+.container .right_screen .control_nav .eye_protect{
+	
+}
+.container .right_screen .control_nav .setting{
+	
+}
