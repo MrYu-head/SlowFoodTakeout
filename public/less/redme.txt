@@ -1,0 +1,3 @@
+*******
+    index.less是index.html(登陆界面)的样式文件
+    main.less是main.html(主页面)的样式文件

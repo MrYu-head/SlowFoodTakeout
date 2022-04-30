@@ -1,0 +1,144 @@
+*,
+body,
+.menuBox,
+.menuContainer,
+.menuList {
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #DCDCDC;
+  position: absolute;
+}
+body .menuBox {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: relative;
+}
+body .menuBox .menuContainer {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+body .menuBox .menuContainer .menuList {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body .menuBox .menuContainer .menuList .shop_overview {
+  width: 100%;
+  height: 20%;
+  margin-bottom: 2%;
+  padding: 0;
+  background-color: #dededc;
+  list-style: none;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe {
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe {
+  width: 30%;
+  height: 100%;
+  background-color: #c8b4c8;
+  float: left;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe .name_price_show {
+  width: 100%;
+  height: 50%;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe .name_price_show p {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe .name_price_show p a {
+  height: 100%;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe .name_price_show .shopName a {
+  height: 100%;
+  font-size: 1.5em;
+  color: #000050;
+  margin: 30px 20px 0;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe .name_price_show .minPrice a {
+  height: 100%;
+  font-size: 1.3em;
+  color: #000064;
+  margin-top: 30px;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe .address_show {
+  height: 50%;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe .address_show p {
+  height: 100%;
+  float: left;
+  text-align: center;
+  line-height: 90px;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe .address_show p:nth-of-type(1) {
+  width: 50%;
+  font-size: 1.3em;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe .address_show p:nth-of-type(2) {
+  width: 20%;
+  font-size: 1em;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .left_discribe .address_show p:nth-of-type(3) {
+  width: 30%;
+  font-size: 1em;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .right_discribe {
+  width: 70%;
+  height: 100%;
+  background-color: #deb4c8;
+  float: left;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .right_discribe .specialty {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .right_discribe .specialty li {
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .right_discribe .specialty li div {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .right_discribe .specialty li div .footImg {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .right_discribe .specialty li div .footImg img {
+  width: 70%;
+  height: 70%;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+body .menuBox .menuContainer .menuList .shop_overview .shop_discribe .right_discribe .specialty li div .foodName {
+  font-size: 1.8em;
+  text-align: center;
+  bottom: 0;
+}

@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+* body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #bec8c8;
+  position: absolute;
+}
+* body .container {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+* body .container .mainBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+* body .container .mainBox .left_main {
+  width: 25%;
+  height: 100%;
+  float: left;
+  background-color: #d3d3d3;
+}
+* body .container .mainBox .left_main .shop_list {
+  display: inline;
+  list-style: none;
+}
+* body .container .mainBox .left_main .shop_list .shop_information {
+  height: 8%;
+  text-align: left;
+}
+* body .container .mainBox .left_main .shop_list .shop_information p {
+  height: 100%;
+  font-size: 2em;
+  color: #4E4E49;
+}
+* body .container .mainBox .left_main .shop_list li:nth-of-type(1) {
+  height: 12%;
+  text-align: center;
+}
+* body .container .mainBox .left_main .shop_list li:nth-of-type(1) .shopName {
+  font-size: 3em;
+}
+* body .container .mainBox .left_main .shop_list .order_bag {
+  height: 16%;
+  margin-top: 20%;
+  text-align: center;
+}
+* body .container .mainBox .left_main .shop_list .order_bag img {
+  width: 30%;
+  height: 100%;
+  margin-left: 5%;
+  float: left;
+}
+* body .container .mainBox .left_main .shop_list .order_bag ul {
+  width: 50%;
+  height: 100%;
+  list-style: none;
+  float: right;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #bebebe;
+}
+* body .container .mainBox .left_main .shop_list .order_bag ul li {
+  width: 100%;
+  height: 100%;
+}
+* body .container .mainBox .left_main .shop_list .order_bag ul li input {
+  height: 100%;
+  font-size: 4em;
+}
+* body .container .mainBox .left_main .shop_list .orderPay {
+  height: 8%;
+  text-align: center;
+  margin-top: 30%;
+}
+* body .container .mainBox .left_main .shop_list .orderPay input {
+  width: 20%;
+  height: 70%;
+}
+* body .container .mainBox .right_main {
+  width: 75%;
+  height: 100%;
+  float: right;
+  background-color: #bec8c8;
+}
+* body .container .mainBox .right_main .main_food_ul {
+  width: 75%;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+}
+* body .container .mainBox .right_main .main_food_ul li {
+  width: 80%;
+  height: 30%;
+  margin: 5% 0 5% 10%;
+  border-radius: 30px;
+  background-color: burlywood;
+  position: relative;
+}
+* body .container .mainBox .right_main .main_food_ul li .menu_list_name {
+  width: 20%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+* body .container .mainBox .right_main .main_food_ul li .menu_list_name p {
+  height: 100%;
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+* body .container .mainBox .right_main .main_food_ul li .menu_list_img {
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+* body .container .mainBox .right_main .main_food_ul li .menu_list_img img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+* body .container .mainBox .right_main .main_food_ul li .menu_list_discrib {
+  width: 26%;
+  height: 100%;
+  float: left;
+  margin-left: 4%;
+}
+* body .container .mainBox .right_main .main_food_ul li .menu_list_discrib p {
+  height: 30%;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+* body .container .mainBox .right_main .main_food_ul li .menu_list_discrib p:nth-of-type(3),
+* body .container .mainBox .right_main .main_food_ul li .menu_list_discrib p:nth-of-type(4) {
+  width: 50%;
+  height: 30%;
+  float: left;
+}
+* body .container .mainBox .right_main .main_food_ul li .menu_list_discrib p:nth-of-type(3) input,
+* body .container .mainBox .right_main .main_food_ul li .menu_list_discrib p:nth-of-type(4) input {
+  width: 50%;
+  height: 50%;
+  font-size: 1.2em;
+  border-radius: 10px;
+}
