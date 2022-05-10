@@ -43,7 +43,7 @@
                     </li>
                     <!-- 订单结算按钮 -->
                     <li class="orderPay" id="orderPay">
-                        <input type="button" value="结算">
+                        <input type="button" value="结算" onclick="orderSettle(order_count)">
                     </li>
                 </ul>
             </div>
@@ -166,7 +166,7 @@
                         <div class="menu_list_discrib">
                             <p>￥20</p>
                             <p>月销量：300</p>
-                            <p><input class="food_count_btn" onclick="addOrder(inputClass)" type="button" value="+"></p>
+                            <p><input class="food_count_btn" onclick="addOrder(order_count)" type="button" value="+"></p>
                             <p><input class="food_reduce_btn" onclick="reduceOrder(order_count)" type="button" value="-"></p>
                         </div>
                     </li>
@@ -182,39 +182,39 @@
         // &diatance='2.3km'
         // &time='23分钟'
 
-        // 先获取到要显示的位置，标签
-        var name = document.getElementById("shopName")
-        var price = document.getElementById("minPrice")
-        var add = document.getElementById("address")
-        var dist = document.getElementById("distance")
-        var tim = document.getElementById("time")
+        // // 先获取到要显示的位置，标签
+        // var name = document.getElementById("shopName")
+        // var price = document.getElementById("minPrice")
+        // var add = document.getElementById("address")
+        // var dist = document.getElementById("distance")
+        // var tim = document.getElementById("time")
 
-        var a = getQueryString();
-        // console.log("这是拿到的数据shopName" + a['shopName'] + a['minPrice']);
-        function getQueryString(){
-            // 获取url中？后边的字符串
-            var url = location.search
-            // 把字符串进行分割，即把每一个(key,value)进行分割,方便后续显示
-            var arr = url.split("&")
-            var theRequest = new Object();
-            if(url.indexOf("?") != -1){
-                var str = url.substr(1)
-                strs = str.split("&")
-                for(var i = 0;i < strs.length;i++){
-                    theRequest[strs[i].split("=")[0]] = decodeURIComponent(strs[i].split("=")[1])
-                    console.log("成功!!!!!!");
-                    // theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1])
-                }
-            }
-            return theRequest
-        }
-        var request = new Object();
-        request = getQueryString();
-        var shopNameData = request["shopName"].toString()
-        var minPriceData = request["minPrice"].toString()
-        var addressData = request["address"].toString()
-        var distanceData = request["distance"].toString()
-        var timeData = request["time"].toString()
+        // var a = getQueryString();
+        // // console.log("这是拿到的数据shopName" + a['shopName'] + a['minPrice']);
+        // function getQueryString(){
+        //     // 获取url中？后边的字符串
+        //     var url = location.search
+        //     // 把字符串进行分割，即把每一个(key,value)进行分割,方便后续显示
+        //     var arr = url.split("&")
+        //     var theRequest = new Object();
+        //     if(url.indexOf("?") != -1){
+        //         var str = url.substr(1)
+        //         strs = str.split("&")
+        //         for(var i = 0;i < strs.length;i++){
+        //             theRequest[strs[i].split("=")[0]] = decodeURIComponent(strs[i].split("=")[1])
+        //             console.log("成功!!!!!!");
+        //             // theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1])
+        //         }
+        //     }
+        //     return theRequest
+        // }
+        // var request = new Object();
+        // request = getQueryString();
+        // var shopNameData = request["shopName"].toString()
+        // var minPriceData = request["minPrice"].toString()
+        // var addressData = request["address"].toString()
+        // var distanceData = request["distance"].toString()
+        // var timeData = request["time"].toString()
 
 
 
@@ -228,7 +228,8 @@
             }
         }
 
-        // 3.点击商品后边的+，购物车数字+1，计算金额
+        // 3.点击商品后边的+，购物车区域就会innerHTML++li，且点击不同的商品，出现不同的数量
+        // 相当于计算每一个商品的数量
         function addOrder(liId){
             liId.value++
         }
@@ -237,6 +238,24 @@
             if(liId.value > 0){
                 liId.value--
             }
+        }
+
+
+        // // 3.1用switch来进行购物车的添加
+        //     function addOrder(liId){
+        //         switch()
+        //     }
+
+
+
+
+        // 5.订单结算按钮点击事件：点击订单结算按钮，把购物车的数据提交到订单页面，进行结算
+        function orderSettle(liId){
+            // 点击按钮时，先判断购物车有没有商品，没有则提示需要添加，有就直接提交
+            if(liId.value == 0){
+                alert("购物车内没有商品，请添加商品！")
+            }
+
         }
 
 

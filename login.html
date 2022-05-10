@@ -39,90 +39,37 @@
 
 	<script type="text/javascript">
 		
-		// // 1. 
-		var phoneNum = $("#phoneNum").val()
-		var passNum = $("#passNum").val().trim()
-		console.log("这是手机号："+phoneNum);
-		console.log("这是密码："+passNum);
+		// // 1. 方法可行，可以获取到数据
 		function submit(){
 			// trim()去掉字符串首尾的空格
 			$.ajax({
 				type:"post",
 				// dataType : "json",
 				// contentType : 'application/json;charset=UTF-8',
-				url:"localhost:127.0.0.1:5500/login",
-				timeout : 30000,  //请求超时时间
+				url:"/login",
+				timeout : 3000,  //请求超时时间
 				data:{
-					phone : phoneNum,
-					password : passNum
+					phone : $("#phoneNum").val(),
+					password : $("#passNum").val()
 				},
-				success : function(res){
-					console.log("这是res的内容：",res);
-					if(res.code){
+				success : function(res,data){
+					var phone = $('#phoneNum').val()
+					if(res.code == 1){
 						alert(res.message)
-						window.location.href = "localhost:127.0.0.1:5500/main.html?phone=" + phone;
+						window.location.href = "/main.html?phone=" + phone;
+						// window.location.href = "/user_information2.html?phone=" + phone;
 					}else{
 						alert(res.message)
 					}
 				},
 				error : function(){
 					console.info("网络出错。")
-					console.log("执行成功！！！！！！！！！！！！！！！！！！！");
-					// alert("网络出错，请重试。")
-					alert("登陆失败，请重试")
+					alert("登陆失败，请重试。。。")
 				}
 			})
 		}
 				
-		// 2.
-		// function submit(){
-		// 	var phone = document.getElementById("phoneNum").value
-		// 	if(phone == null || phone == ""){
-		// 		alert("用户名错误")
-		// 		// 此方法用于强制打断action跳转
-		// 		event.preventDefault()
-		// 	}else{
-		// 		window.event.returnValue = false;
-		// 		window.location.href = "http://127.0.0.1:5500/main.html?phone=" + phone;
-		// 	}
-		// }
-
-		// 3.
-		// $(function(){
-		// 	$("#loginBtn").click(function(){
-		// 		var phoneNum = $("#phoneNum").val()
-		// 		var passNum = $("#passNum").val()
-		// 		console.log("这是手机号："+phoneNum);
-		// 		console.log("这是密码："+passNum);
-		// 		$.ajax({
-		// 			async : false,
-		// 			// url : "localhost:127.0.0.1:5500/login.html?phone=req.body.phone&password=req.body.password",
-		// 			url : "localhost:127.0.0.1:5500/login.html",
-		// 			data : $("#loginForm").serialize(),
-		// 			type : "post",
-		// 			dataType : "text",
-		// 			success:function(data){
-		// 				if(data === "success"){
-		// 					window.location.href = "127.0.0.1:5500/main.html?" + $("phoneNum").val() + ""
-		// 				}
-		// 			}
-		// 		})
-		// 		window.location.href = "main.html?value=" + phoneNum
-		// 	})
-		// })
 		
-		// $.ajax({
-		// 	async : true,
-		// 	type : "post",
-		// 	url : "http://127.0.0.1:5500/login.html?phone=req.body.phone&password=req.body.password",
-		// 	success : function(){
-		// 		// 请求成功
-		// 		alert("登陆成功。")
-		// 	},
-		// 	error : function(){
-		// 		alert("登陆出错，请重试。")
-		// 	}
-		// })
 
 
 	</script>

@@ -47,42 +47,30 @@
 					</p>
 					</p>
 					<ul class="ulList" id="ulList3" style="display: none;">
-						<li><a href="./views/user_information.html" target="main_screen_window">我的信息</a></li>
+						<li><a href="./user_information2.html" target="main_screen_window">我的信息</a></li>
 					</ul>
 				</li>
 				<li class="liList">
 					<p onclick="show_hide_menu(ulList4)">
-						<span class="iconSpan"><img src="./public/img/left_bar_img/position.png" alt=""></span>
-						<span class="textDiscription">地址管理</span>
-						<!-- <span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span> -->
-					</p>
-					</p>
-					<ul class="ulList" id="ulList4" style="display: none;">
-						<li><a href="./views/user_address.html" target="main_screen_window">我的收获地址</a></li>
-						<li><a href="./views/add_new_address.html" target="main_screen_window">添加新地址</a></li>
-					</ul>
-				</li>
-				<li class="liList">
-					<p onclick="show_hide_menu(ulList5)">
 						<span class="iconSpan"><img src="./public/img/left_bar_img/red_enevlope_card.png" alt=""></span>
 						<span class="textDiscription">红包&卡券</span>
 						<!-- <span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span> -->
 					</p>
 					</p>
-					<ul class="ulList" id="ulList5" style="display: none;">
+					<ul class="ulList" id="ulList4" style="display: none;">
 						<li><a href="./views/res_discount.html" target="main_screen_window">已获得</a></li>
 						<li><a href="./views/used_red.html" target="main_screen_window">已使用</a></li>
 						<li><a href="./views/date_old.html" target="main_screen_window">已过期</a></li>
 					</ul>
 				</li>
 				<li class="liList">
-					<p onclick="show_hide_menu(ulList6)">
+					<p onclick="show_hide_menu(ulList5)">
 						<span class="iconSpan"><img src="./public/img/left_bar_img/data.png" alt=""></span>
 						<span class="textDiscription">数据统计</span>
 						<!-- <span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span> -->
 					</p>
 					</p>
-					<ul class="ulList" id="ulList6" style="display: none;">
+					<ul class="ulList" id="ulList5" style="display: none;">
 						<li><a href="#" target="main_screen_window">外卖数据统计</a></li>
 					</ul>
 				</li>
@@ -95,10 +83,9 @@
 				</li>
 			</ul>
 		</div>
-		<!-- 右侧/中间屏幕 -->
 		<div class="main_screen" id="main_screen">
-			<iframe name="main_screen_window" src="./views/menu.html" frameborder="0">
-			</iframe>
+			<iframe name="main_screen_window" src="./views/menu.html" frameborder="0"></iframe>
+			<!-- <iframe name="main_screen_window" src="./user_information2.html" frameborder="0"></iframe> -->
 		</div>
 		<!-- 右侧工具栏 -->
 		<div class="right_toolbar" id="right_toolbar">
@@ -107,7 +94,7 @@
 					<p onclick="show_hide_list(user_inform)"><img src="./public/img/right_toolBsr_img/user_avatar2.png" class="user_inform_img" id=""user_inform_img></p>
 					<ul class="user_inform" id="user_inform" style="display: none;">
 						<li><img src="./public/img/right_toolBsr_img/user_avatar.png" alt=""></li>
-						<!-- <li id="user_ing_phone"></li> -->
+						<li id="user_ing_phone"></li>
 						<li><a href="./login.html">切换账号</a><a href="./login.html">退出登录</a></li>
 					</ul>
 				</li>
@@ -161,6 +148,18 @@
 		}
 
 		// // 1.3右上角用户信息小窗中显示当前登录的用户的手机号
+		$(function(){
+			$('#user_ing_phone').html(oneValue())
+		})
+		function oneValue(){
+			var result;
+			var url = window.location.search
+			if(url.indexOf("?") != -1){
+				result = url.substr(url.indexOf("=") + 1)
+			}
+			return result
+		}
+
 		// var userPhone = document.getElementById("user_ing_phone")
 		// var url = location.search.substr(1)
 		// console.log("这是url",url);

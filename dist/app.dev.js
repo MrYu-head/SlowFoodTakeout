@@ -56,57 +56,78 @@ app.get('/main', function (req, res) {
   res.sendFile(__dirname + '/' + 'main.html');
 }); // 菜单界面
 
-app.get('//menu', function (req, res) {
+app.get('/menu', function (req, res) {
   res.sendFile(__dirname + '/' + 'views/menu.html');
 }); // 订单界面
 
 app.get('/order', function (req, res) {
   res.sendFile(__dirname + '/' + '/views/order.html');
-}); // 为登录操作添加接口
+}); // 个人信息界面
+
+app.get('/user_inform', function (req, res) {
+  // res.sendFile(__firname + '/' + '/views/user_information.html')
+  res.sendFile(__firname + '/' + 'user_information2.html');
+}); // 1.为登录操作添加接口
 
 app.post("/login", function (req, res) {
   var phone = req.body.phone;
   var password = req.body.password;
 
-  if (!phone) {
-    res.sendFile(__dirname + "/" + "login.html");
+  if (!phone && !password) {
+    res.json({
+      code: 0,
+      message: "请确认输入正常。"
+    });
   } else {
     db.searchUser({
       phone: phone
     }, function (result) {
       if (result.length > 0) {
         if (result[0].phone == phone && result[0].password == password) {
-          // 登陆成功进入主界面
-          res.sendFile(__dirname + "/" + "main.html");
+          res.json({
+            code: 1,
+            message: "登陆成功！"
+          });
         } else {
-          res.sendFile(__dirname + "/" + "login.html");
+          res.json({
+            code: -1,
+            message: "手机号或密码错误，请重试。"
+          });
         }
       } else {
-        res.sendFile(__dirname + "/" + "login.html");
+        res.json({
+          code: -1,
+          message: "手机号或密码不正确，请重新输入。"
+        });
       }
     });
   }
-}); // 为注册添加接口
+}); // 2.为注册添加接口
 
 app.post('/register', function (req, res) {
   var phone = req.body.phone;
   var password = req.body.password;
 
-  if (!phone) {
-    // 手机号不能为空
-    res.sendFile(__dirname + "/" + "register.html");
-  } else if (!password) {
-    // 密码不能为空
-    res.sendFile(__dirname + "/" + "register.html");
+  if (!phone && !password) {
+    res.json({
+      code: 0,
+      message: "请确认输入正常。"
+    });
   } else {
     db.searchUser({
       phone: phone
     }, function (result) {
       if (result.length > 0 && result[0].phone == phone) {
         // 注册成功，返回登陆
-        res.sendFile(__dirname + "/" + "login.html");
+        res.json({
+          code: 1,
+          message: "注册成功，可以登录。"
+        });
       } else {
-        res.sendFile(__dirname + "/" + "register.html");
+        res.json({
+          code: -1,
+          message: "注册失败，请重试。"
+        });
         db.insertUser({
           phone: phone,
           password: password
@@ -114,25 +135,56 @@ app.post('/register', function (req, res) {
           if (!insertResult) {
             res.json({
               code: 1,
-              message: "登陆成功"
-            }); // 注册成功，返回登陆
-
-            res.sendFile(__dirname + "/" + "login.html");
+              message: "注册成功，可以登录。"
+            });
           } else {
-            res.sendFile(__dirname + "/" + "register.html");
+            res.json({
+              code: -1,
+              message: "注册失败，请重试。"
+            });
           }
         });
       }
     });
   }
-});
-app.post('/main', function (req, res) {
-  res.sendFile(__dirname + '/' + 'main.html');
-}); // 从数据库获取shop表中的商家以及菜单信息展示在menu.html中
+}); // 3.个人信息修改接口
 
-app.post('/menu', function (erq, res) {
-  db.searchUser;
-});
+app.post('/user_inform', function (req, res) {
+  var phone = req.body.phone / db.searchUser({
+    phone: phone
+  }, function (result) {
+    if (result.length > 0 && result[0].phone == phone) {
+      res.json({
+        code: 1,
+        message: "修改手机号成功！！！"
+      });
+    } else {
+      res.json({
+        code: -1,
+        message: "修改手机号失败,请重试。"
+      });
+      db.updateUser({
+        phone: phone
+      }, function (updateResult) {
+        if (updateResult == phone) {
+          res.json({
+            code: -1,
+            message: "修改的手机号与原手机号重复，修改失败。"
+          });
+        } else {
+          res.json({
+            code: 1,
+            message: "修改手机号成功！！！"
+          });
+        }
+      });
+    }
+  }); // }
+}); // 从数据库获取shop表中的商家以及菜单信息展示在menu.html中
+// app.post('/menu',function(erq,res){
+//     db.searchUser
+// })
+
 app.listen(port, hostName, function () {
   console.log("\u670D\u52A1\u5668\u5DF2\u542F\u52A8\uFF0C\u76D1\u542C\u7AEF\u53E3\uFF1A".concat(hostName, ":").concat(port));
 });
