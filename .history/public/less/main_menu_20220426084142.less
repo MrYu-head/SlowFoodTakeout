@@ -1,0 +1,36 @@
+@leftfloat:left;
+@rightfloat:right;
+@relative:relative;
+@absolute:absolute;
+@wi
+*{
+    margin: 0;
+    padding: 0;
+    body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        position: @absolute;
+        background-color: rgb(220, 220, 220);
+        .container{
+            border: 0;
+            .mainBox{
+                position: @relative;
+                .left_main{
+                    width: 20%;
+                    height: 100%;
+                    float: @leftfloat;
+                    background-color: red;
+                }
+                .right_main{
+                    width: 80%;
+                    height: 100%;
+                    float: @rightfloat;
+                    background-color: green;
+                }
+            }
+        }
+    }
+}

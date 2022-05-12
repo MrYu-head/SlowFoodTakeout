@@ -1,0 +1,44 @@
+文件说明：
+    app.js    主程序入口
+    db.js    数据库文件，包含增删改查模块
+    login.html    登陆界面
+    register.html    注册界面
+    main.html    系统主页面，点餐主页面
+    views----页面资源文件夹
+      --menu.html    菜单页面
+      --order.html    订单页面
+
+    
+    login.html    登陆界面
+    register.html    注册界面
+    app.js    主程序入口，包括数据请求、数据库连接等
+    db.js    数据库文件，包含增删改查四个方法函数 
+    html----html资源文件夹
+      --main.html    系统主页面，点餐主页面
+      --menu.html    菜单界面，主要展示商家信息及菜单
+    less----less文件夹，存放样式资源文件
+      --index.less    登录界面样式
+      --main.less     main.html界面样式
+      --menu.less     menu菜单界面样式
+
+    js----js脚本文件夹
+    
+    
+    
+
+js文件说明：
+    change_tab.js----登录界面选项卡切换逻辑。
+    show_hide_list.js----左侧菜单栏点击效果，包括：显示和隐藏。
+
+
+
+
+
+
+
+
+
+
+
+
+

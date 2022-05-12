@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="SHORTCUT ICON" href="./img//left_bar_img/websiteLogo.png">
+	<link rel="stylesheet/less" href="./less/index.less" />
+	<script src="./node_modules/less/dist/less.min.js"></script>
+	<script src="./node_modules/jquery/jquery.min.js"></script>
+    <title>慢膳外卖-只做最适合你的外卖！</title>
+	
+</head>
+<body>
+	<div class="login_regist" id="login_regist">
+		<div class="container" id="container">
+			<form action="/login" method="get">
+				<div class="form_item_head">
+					<p>登录</p>
+				</div>
+				<div class="form_item">
+					<span><img src="./img/login_regist_img/phone_user_img.png" alt=""></span>
+					<input type="number" id="phoneNum" placeholder="请输入手机号">
+				</div>
+				<div class="form_item">
+					<span><img src="./img//login_regist_img/password_lock.png" alt=""></span>
+					<input type="password" id="passNum" placeholder="请输入密码">
+				</div>
+				<div class="form_item">
+					<input type="submit" id="loginBtn" value="登录">
+					<input type="reset" id="clearInput" value="重置">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		// jquery将输入的手机号和密码转换为json格式发送到后端
+
+		// 获取地址栏的id
+		var id = location.search
+		// 将输入的手机号和密码信息发送到后台
+		$(document).ready(function () {
+            $(".submit").on("click",function(){
+                    $.ajax({
+                    type: "get",
+                    url: "127.0.0.1:5500/controller/indexControl.js",
+                    data : JSON.stringify({
+                        phone : $("#phoneNum").val(),
+						password : $("#passNum").val()
+                    }),
+                    success: function (res) {
+                        console.log(res)
+                    }
+                });
+            })
+        });
+
+
+	</script>
+
+
+</body>
+</html>

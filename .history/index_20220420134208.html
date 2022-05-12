@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="SHORTCUT ICON" href="./img//left_bar_img/websiteLogo.png">
+	<link rel="stylesheet/less" href="./less/index.less" />
+	<script src="./node_modules/less/dist/less.min.js"></script>
+	<script src="./node_modules/jquery/jquery.min.js"></script>
+    <title>慢膳外卖-只做最适合你的外卖！</title>
+	
+</head>
+<body>
+	<div class="login_regist" id="login_regist">
+		<div class="container" id="container">
+			<form action="/login" method="post">
+				<div class="form_item_head">
+					<p>登录</p>
+				</div>
+				<div class="form_item">
+					<span><img src="./img/login_regist_img/phone_user_img.png" alt=""></span>
+					<input type="number" id="phoneNum" placeholder="请输入手机号">
+				</div>
+				<div class="form_item">
+					<span><img src="./img//login_regist_img/password_lock.png" alt=""></span>
+					<input type="password" id="passNum" placeholder="请输入密码">
+				</div>
+				<div class="form_item">
+					<input type="submit" id="loginBtn" onclick="submit()" value="登录">
+					<input type="reset" id="clearInput" value="重置">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	
+		function submit(){
+			var phone = $("#phoneNum").val().trim()
+			var password = $("#passNum").val().trim()
+			$.ajax({
+				url:"http://127.0.0.1:5500/index",
+				type:"post",
+				data:{
+					userPhone : phone,
+					userPwd : password
+				},
+				success : function(res){
+					console.log(res);
+					if(res.code == 0){
+						window.loca
+					}
+				}
+			})
+		}
+
+		// var phoneNum = document.getElementById("phoneNum")
+		// var passNum = document.getElementById("passNum")
+		// $("#loginBtn").click(function(err){
+		// 	err.preventDefault()
+		// 	$.post({
+		// 		url : "http://127.0.0.1:5500/index",
+		// 		data : {
+		// 			phone : phoneNum.value,
+		// 			password : passNum.value,
+		// 		},
+		// 		success : function(res){
+		// 			console.log(res);
+		// 			alert(`${res.mima}`)
+		// 		}
+		// 	})
+		// })
+		
+
+
+	</script>
+
+
+</body>
+</html>

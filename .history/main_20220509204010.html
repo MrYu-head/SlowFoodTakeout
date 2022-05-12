@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<link rel="SHORTCUT ICON" href="./public/img//left_bar_img/websiteLogo.png">
+	<link rel="stylesheet/less" type="text/css" href="./public/less/main.less" />
+	<script src="./node_modules/less/dist/less.min.js"></script>
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<!-- <script src="../node_modules/jquery/jquery-3.3.1.min.js"></script> -->
+	<title>慢膳外卖--只做最适合您的外卖</title>
+</head>
+<body style="overflow: -Scroll;overflow-y: hidden;overflow-x: hidden;">
+	<div class="container"> 
+		<!-- 左侧菜单栏 -->
+		<div class="left_menu" id="left_menu">
+			<ul id="left_menu_list" class="left_menu_list">
+				<li class="liMap">
+					慢膳外卖
+				</li>
+				<li class="liList">
+					<p onclick="show_hide_menu(ulList1)">
+						<span class="iconSpan"><img src="./public/img/left_bar_img/food.png" alt=""></span>
+						<span class="textDiscription">外卖美食</span>
+						<!-- <span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" ></span> -->
+					</p>
+					<ul class="ulList" id="ulList1" style="display: none;">
+						<li><a href="./views/menu.html" target="main_screen_window">外卖美食</a></li>
+					</ul>
+				</li>
+				<li class="liList">
+					<p onclick="show_hide_menu(ulList2)">
+						<span class="iconSpan"><img src="./public/img/left_bar_img/order.png" alt=""></span>
+						<span class="textDiscription">订单管理</span>
+						<!-- <span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span> -->
+					</p>
+					</p>
+					<ul class="ulList" id="ulList2" style="display: none;">
+						<li><a href="./views/order.html" target="main_screen_window">历史订单</a></li>
+						<!-- <li><a href="" target="main_screen_window">订单统计</a></li> -->
+					</ul>
+				</li>
+				<li class="liList">
+					<p onclick="show_hide_menu(ulList3)">
+						<span class="iconSpan"><img src="./public/img/left_bar_img/personal_information.png" alt=""></span>
+						<span class="textDiscription">个人信息管理</span>
+						<!-- <span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span> -->
+					</p>
+					</p>
+					<ul class="ulList" id="ulList3" style="display: none;">
+						<li><a href="./views/user_information.html" target="main_screen_window">我的信息</a></li>
+					</ul>
+				</li>
+				<!-- <li class="liList">
+					<p onclick="show_hide_menu(ulList4)">
+						<span class="iconSpan"><img src="./public/img/left_bar_img/position.png" alt=""></span>
+						<span class="textDiscription">地址管理</span>
+					</p>
+					</p>
+					<ul class="ulList" id="ulList4" style="display: none;">
+						<li><a href="./views/user_address.html" target="main_screen_window">我的收获地址</a></li>
+						<li><a href="./views/add_new_address.html" target="main_screen_window">添加新地址</a></li>
+					</ul>
+				</li> -->
+				<li class="liList">
+					<p onclick="show_hide_menu(ulList4)">
+						<span class="iconSpan"><img src="./public/img/left_bar_img/red_enevlope_card.png" alt=""></span>
+						<span class="textDiscription">红包&卡券</span>
+						<!-- <span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span> -->
+					</p>
+					</p>
+					<ul class="ulList" id="ulList4" style="display: none;">
+						<li><a href="./views/res_discount.html" target="main_screen_window">已获得</a></li>
+						<li><a href="./views/used_red.html" target="main_screen_window">已使用</a></li>
+						<li><a href="./views/date_old.html" target="main_screen_window">已过期</a></li>
+					</ul>
+				</li>
+				<li class="liList">
+					<p onclick="show_hide_menu(ulList5)">
+						<span class="iconSpan"><img src="./public/img/left_bar_img/data.png" alt=""></span>
+						<span class="textDiscription">数据统计</span>
+						<!-- <span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span> -->
+					</p>
+					</p>
+					<ul class="ulList" id="ulList5" style="display: none;">
+						<li><a href="#" target="main_screen_window">外卖数据统计</a></li>
+					</ul>
+				</li>
+				<li class="imgLi">
+					<div class="imgLiBox">
+						<img src="./public/img/left_bar_img/Logo.png">
+						<p>扫描二维码下载手机App</p>
+						<p>点餐更快捷！</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 右侧/中间屏幕 -->
+		<div class="main_screen" id="main_screen">
+			<iframe name="main_screen_window" src="./views/user" frameborder="0">
+			</iframe>
+		</div>
+		<!-- 右侧工具栏 -->
+		<div class="right_toolbar" id="right_toolbar">
+			<ul class="toolList" id="toolList">
+				<li class="toolLi" id="userimg_toolLi">
+					<p onclick="show_hide_list(user_inform)"><img src="./public/img/right_toolBsr_img/user_avatar2.png" class="user_inform_img" id=""user_inform_img></p>
+					<ul class="user_inform" id="user_inform" style="display: none;">
+						<li><img src="./public/img/right_toolBsr_img/user_avatar.png" alt=""></li>
+						<!-- <li id="user_ing_phone"></li> -->
+						<li><a href="./login.html">切换账号</a><a href="./login.html">退出登录</a></li>
+					</ul>
+				</li>
+				<li class="toolLi">
+					<p><img src="./public/img//right_toolBsr_img/light_mode.png" alt=""></p>
+				</li>
+				<!-- 全屏显示按钮 -->
+				<li class="toolLi" id="full_screen" style="display: block;">
+					<p><img src="./public/img/right_toolBsr_img/fall_screen.png" alt=""></p>
+				</li>
+				<!-- 退出全屏显示按钮 -->
+				<li class="toolLi" id="exit_screen" style="display: none;">
+					<p><img src="./public/img/right_toolBsr_img/exit_fall_screen.png" alt=""></p>
+				</li>
+				<!-- <li class="toolLi">
+					<p>[zh/中文]</span>
+					<p style="display: none;">[en/英文]</p>
+				</li>
+				<li class="toolLi">
+					<p><img src="../img/right_toolBsr_img/ER_code.png" alt=""></p>
+				</li>
+				<li class="toolLi">
+					<p><img src="../img/right_toolBsr_img/contact_with_us.png" alt=""></p>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		// 1.1二级菜单列表展开与收缩
+		var img = document.getElementsByClassName("iconImg")
+		function show_hide_menu(ulId){
+			if(ulId.style.display == "none"){
+				ulId.style.display = "block"
+				// $(img.iconImg).click
+				// r += 180
+				
+			}else{
+				ulId.style.display = "none"
+			}
+		}
+
+		// 1.2点击右上角头像，显示用户信息，再次点击，信息隐藏
+		function show_hide_list(ulId){
+			// console.log("获取成功");
+			if(ulId.style.display == 'none'){
+				ulId.style.display = 'block'
+			}else{
+				ulId.style.display = 'none'
+			}
+		}
+
+		// // 1.3右上角用户信息小窗中显示当前登录的用户的手机号
+		// var userPhone = document.getElementById("user_ing_phone")
+		// var url = location.search.substr(1)
+		// console.log("这是url",url);
+		// var arr = url.split("=")
+		// userPhone.innerHTML = arr[1]
+
+
+		// userPhone.innerHTML = window.location.split("?")[1]
+		// $(function(){
+		// 	var userPhone = document.getElementById("user_ing_phone")
+		// 	console.log(decodeURI(location.search.concat()));
+		// 	// 要显示手机号的地方
+		// 	$("#userPhone").html(userIn())
+		// })
+		// function userIn(){
+		// 	var userResult
+		// 	var user_url = location.href
+		// 	if(user_url.indexOf("?") != -1){
+		// 		userResult = user_url.substr(user_url.indexOf("=") + 1)
+		// 		console.log("这是打印的数据",userResult);
+		// 		return userResult
+		// 	}
+		// }
+
+
+
+		// 1.4右侧工具栏全屏显示逻辑
+		function fullScreen(el) {
+            var rfs = el.requestFullScreen || 
+						el.webkitRequestFullScreen || 
+						el.mozRequestFullScreen || 
+						el.msRequestFullScreen,
+                wscript
+            if (typeof rfs != "undefined" && rfs) {
+                rfs.call(el);
+                return;
+            }
+            if (typeof window.ActiveXObject != "undefined") {
+                wscript = new ActiveXObject("WScript.Shell");
+                if (wscript) {
+                    wscript.SendKeys("{F11}");
+                }
+            }
+        }
+        // 定义退出全屏
+        function exitFullScreen(el) {
+            var el = document,
+                cfs = el.cancelFullScreen || 
+						el.webkitCancelFullScreen || 
+						el.mozCancelFullScreen || 
+						el.exitFullScreen, wscript;
+            if (typeof cfs != "undefined" && cfs) {
+                cfs.call(el);
+                return;
+            }
+            if (typeof window.ActiveXObject != "undefined") {
+                wscript = new ActiveXObject("WScript.Shell");
+                if (wscript != null) {
+                    wscript.SendKeys("{F11}");
+                }
+            }
+        }
+        // 调用全屏功能
+		// 点击全屏按钮时，进入全屏，当前按钮变为none，退出全屏按钮变为display
+        var fullBtn = document.getElementById("full_screen");
+		var exitBtn = document.getElementById("exit_screen")
+        var content = document.documentElement
+        fullBtn.onclick = function () {
+            fullScreen(content);
+			fullBtn.style.display = 'none'
+			exitBtn.style.display = 'block'
+        }
+        // var quite = document.getElementById("quite");
+        exitBtn.onclick = function () {
+            exitFullScreen();
+			fullBtn.style.display = 'block'
+			exitBtn.style.display = 'none'
+        }
+		
+
+
+		
+
+	</script>
+</body>
+</html>

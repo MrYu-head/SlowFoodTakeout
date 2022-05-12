@@ -54,7 +54,7 @@
   text-align: center;
   float: left;
 }
-* body .container .mainBox .user_main .main_inform p:nth-of-type(2) {
+* body .container .mainBox .user_main .main_inform .inputText {
   width: 398px;
   height: 98px;
   margin-right: 100px;

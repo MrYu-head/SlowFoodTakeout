@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" href="../public/less/main_menu.less">
+    <script src="../node_modules/less/dist/less.min.js"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="mainBox" id="mainBox">
+            <!-- 这是左侧商家信息以及简介 -->
+            <div class="left_main" id="left_main">
+                <ul class="shop_list" id="shop_list">
+                    <li class="shop_information">
+                        <p class="shopName">111</p>
+                    </li>
+                    <li class="shop_information">
+                        <p class="minPrice">222</p>
+                    </li>
+                    <li class="shop_information">
+                        <p class="address">333</p>
+                    </li>
+                    <li class="shop_information">
+                        <p class="distance">444</p>
+                    </li>
+                    <li class="shop_information">
+                        <p class="time">555</p>
+                    </li>
+                    <li class="shop_information">
+                        <p class="text">欢迎点餐!祝您用餐愉快！</p>
+                    </li>
+                    <!-- 购物车 -->
+                    <li class="order_bag" id="order_bag">
+                        <p class="imgBtnP" id="imgBtnP" onclick="changeList(order_bag_list)" ><img class="imgBtn" id="imgBtn" src="../public/img/food_menu/order_bag.png" alt=""></p>
+                        <!-- 当添加购物车后购物车数量增加，点击购物车，ul显示 -->
+                        <ul class="order_bag_list" id="order_bag_list" style="display: none;">
+                            <li>
+                                <input class="order_count" id="order_count" type="text" value="0" >
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 订单结算按钮 -->
+                    <li class="orderPay" id="orderPay">
+                        <input type="button" value="结算">
+                    </li>
+                </ul>
+            </div>
+            <!-- 这是右侧该商家的详细菜单展示 -->
+            <div class="right_main" id="right_main">
+                <ul class="main_food_ul">
+                    <li class="main_food_list">
+                        <div class="menu_list_name">
+                            <p>套餐1</p>
+                        </div>
+                        <div class="menu_list_img"><img src="../public/img/food_menu/Food_fifteen.png" alt=""></div>
+                        <div class="menu_list_discrib">
+                            <p>￥20</p>
+                            <p>月销量：300</p>
+                            <p><input class="food_count_btn" onclick="addOrder(order_count)" type="button" value="+"></p>
+                            <p><input class="food_count_btn" onclick="reduceOrder(order_count)" type="button" value="-"></p>
+                        </div>
+                    </li>
+                    <li class="main_food_list">
+                        <div class="menu_list_name">
+                            <p>套餐2</p>
+                        </div>
+                        <div class="menu_list_img"><img src="../public/img/food_menu/Food_one.png" alt=""></div>
+                        <div class="menu_list_discrib">
+                            <p>￥18</p>
+                            <p>月销量：190</p>
+                            <p><input class="food_count_btn" onclick="addOrder(order_count)" type="button" value="+"></p>
+                            <p><input class="food_count_btn" onclick="reduceOrder(order_count)" type="button" value="-"></p>
+                        </div>
+                    </li>
+                    <li class="main_food_list">
+                        <div class="menu_list_name">
+                            <p>套餐3</p>
+                        </div>
+                        <div class="menu_list_img"><img src="../public/img/food_menu/Food_ten.png" alt=""></div>
+                        <div class="menu_list_discrib">
+                            <p>￥22</p>
+                            <p>月销量：330</p>
+                            <p><input class="food_count_btn" onclick="addOrder(order_count)" type="button" value="+"></p>
+                            <p><input class="food_count_btn" onclick="reduceOrder(order_count)" type="button" value="-"></p>
+                        </div>
+                    </li>
+                    <li class="main_food_list">
+                        <div class="menu_list_name">
+                            <p>套餐4</p>
+                        </div>
+                        <div class="menu_list_img"><img src="../public/img/food_menu/Food_seven.png" alt=""></div>
+                        <div class="menu_list_discrib">
+                            <p>￥27</p>
+                            <p>月销量：80</p>
+                            <p><input class="food_count_btn" onclick="addOrder(order_count)" type="button" value="+"></p>
+                        </div>
+                    </li>
+                    <li class="main_food_list">
+                        <div class="menu_list_name">
+                            <p>套餐5</p>
+                        </div>
+                        <div class="menu_list_img"><img src="../public/img/food_menu/Food_four.png" alt=""></div>
+                        <div class="menu_list_discrib">
+                            <p>￥16</p>
+                            <p>月销量：90</p>
+                            <p><input class="food_count_btn" onclick="addOrder(order_count)" type="button" value="+"></p>
+                        </div>
+                    </li>
+                    <li class="main_food_list">
+                        <div class="menu_list_name">
+                            <p>套餐6</p>
+                        </div>
+                        <div class="menu_list_img"><img src="../public/img/food_menu/Food_eleven.png" alt=""></div>
+                        <div class="menu_list_discrib">
+                            <p>￥20</p>
+                            <p>月销量：300</p>
+                            <p><input class="food_count_btn" onclick="addOrder(order_count)" type="button" value="+"></p>
+                        </div>
+                    </li>
+                    <li class="main_food_list">
+                        <div class="menu_list_name">
+                            <p>套餐7</p>
+                        </div>
+                        <div class="menu_list_img"><img src="../public/img/food_menu/Food_twelve.png" alt=""></div>
+                        <div class="menu_list_discrib">
+                            <p>￥20</p>
+                            <p>月销量：300</p>
+                            <p><input class="food_count_btn" onclick="addOrder(order_count)" type="button" value="+"></p>
+                        </div>
+                    </li>
+                    <li class="main_food_list">
+                        <div class="menu_list_name">
+                            <p>套餐8</p>
+                        </div>
+                        <div class="menu_list_img"><img src="../public/img/food_menu/Food_eight.png" alt=""></div>
+                        <div class="menu_list_discrib">
+                            <p>￥20</p>
+                            <p>月销量：300</p>
+                            <p><input class="food_count_btn" onclick="addOrder(order_count)" type="button" value="+"></p>
+                        </div>
+                    </li>
+                    <li class="main_food_list">
+                        <div class="menu_list_name">
+                            <p>套餐9</p>
+                        </div>
+                        <div class="menu_list_img"><img src="../public/img/food_menu/Food_fifteen.png" alt=""></div>
+                        <div class="menu_list_discrib">
+                            <p>￥20</p>
+                            <p>月销量：300</p>
+                            <p><input class="food_count_btn" onclick="addOrder(order_count)" type="button" value="+"></p>
+                        </div>
+                    </li>
+                    <li class="main_food_list">
+                        <div class="menu_list_name">
+                            <p>套餐10</p>
+                        </div>
+                        <div class="menu_list_img"><img src="../public/img/food_menu/Food_five.png" alt=""></div>
+                        <div class="menu_list_discrib">
+                            <p>￥20</p>
+                            <p>月销量：300</p>
+                            <p><input class="food_count_btn" onclick="addOrder(inputClass)" type="button" value="+"></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 点击商家进入该界面后，左侧商家详细信息简介处需要获取到当前点击的a标签的商家名
+        // shopName='张亮麻辣烫'
+        // minPrice='￥20起送"
+        // &address='宝龙城市广场'
+        // &diatance='2.3km'
+        // &time='23分钟'
+
+        // 先获取到要显示的位置，标签
+        var name = document.getElementById("shopName")
+        var price = document.getElementById("minPrice")
+        var add = document.getElementById("address")
+        var dist = document.getElementById("distance")
+        var tim = document.getElementById("time")
+
+        var a = getQueryString();
+        // console.log("这是拿到的数据shopName" + a['shopName'] + a['minPrice']);
+        function getQueryString(){
+            // 获取url中？后边的字符串
+            var url = location.search
+            // 把字符串进行分割，即把每一个(key,value)进行分割,方便后续显示
+            var arr = url.split("&")
+            var theRequest = new Object();
+            if(url.indexOf("?") != -1){
+                var str = url.substr(1)
+                strs = str.split("&")
+                for(var i = 0;i < strs.length;i++){
+                    theRequest[strs[i].split("=")[0]] = decodeURIComponent(strs[i].split("=")[1])
+                    console.log("成功!!!!!!");
+                    // theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1])
+                }
+            }
+            return theRequest
+        }
+        var request = new Object();
+        request = getQueryString();
+        var shopNameData = request["shopName"].toString()
+        var minPriceData = request["minPrice"].toString()
+        var addressData = request["address"].toString()
+        var distanceData = request["distance"].toString()
+        var timeData = request["time"].toString()
+
+
+
+
+        // 2.点击购物车，购物车列表在下方展示
+        function changeList(ulId){
+            if(ulId.style.display == 'none'){
+                ulId.style.display = 'block'
+            }else{
+                ulId.style.display = 'none'
+            }
+        }
+
+        // 3.点击商品后边的+，购物车数字+1，计算金额
+        function addOrder(liId){
+            liId.value++
+        }
+        // 4.点击-号，购物车减少
+        function reduceOrder(liId){
+            if(liId.value > 0){
+                liId.value--
+            }
+        }
+
+
+    </script>
+</body>
+</html>

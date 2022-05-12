@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet/less" type="text/css" href="../less/menu.less">
+	<script src="../node_modules/less/dist/less.min.js"></script>
+	<script src="../node_modules/jquery/jquery.min.js"></script>
+    <!-- <title>Document</title> -->
+</head>
+<body>
+    <!-- 菜单商家展示界面不需要设置flex弹性盒子，设置普通盒子即可 -->
+    <div class="menuBox" id="menuBox">
+        <div class="menuContainer" id="menuContainer">
+            <!-- 这是菜单总列表 -->
+            <ul class="menuList" id="menuList">
+                <!-- 这是具体到每一个商家展示的招牌菜单 -->
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">张亮麻辣烫</a></p>
+                                <p class="minPrice"><a href="#">￥20起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>宝龙城市广场</p><p>2.3km</p><p>23分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="specialtyOne">
+                                        span
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview"></li>
+                <li class="shop_overview"></li>
+                <li class="shop_overview"></li>
+                <li class="shop_overview"></li>
+                <li class="shop_overview"></li>
+                <li class="shop_overview"></li>
+                <li class="shop_overview"></li>
+                <li class="shop_overview"></li>
+                <li class="shop_overview"></li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

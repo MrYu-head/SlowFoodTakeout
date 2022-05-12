@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" href="../public/less/user_information.less">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/less/dist/less.min.js"></script>
+</head>
+<body>
+    <!-- 个人信息管理界面，展示当前登录的用户的个人信息，包括手机号、密码、收货地址等。 -->
+    <div class="container" id="container">
+        <div class="mainBox" id="mainBox">
+            <ul class="user_main" id="user_main">
+                <li class="main_inform_img"><span class="main_img" id="main_img"><img src="../public/img/right_toolBsr_img/user_avatar.png" alt=""></span></li>
+                <li class="main_inform">
+                    <input type="button" onclick="submitBtn()" value="显示数据">
+                </li>
+                <li class="main_inform">
+                    <p class="phoneNum" id="phoneNum">手机号</p>
+                    <!-- <p class="phone" id="phone"></p> -->
+                    <input type="number" id="phone" class="inputText" readonly="readonly" name="phone">
+                </li>
+                <li class="changeTab">
+                    <input id="edit" class="clickBtn" type="submit" value="编辑">
+                    <input id="confirm" class="clickBtn" type="submit" value="确认">
+                    <input id="cancle" class="clickBtn" type="buttom" value="取消">
+                </li>
+                <li class="main_inform">
+                    <p class="passwordNum" id="passwordNum">密码</p>
+                    <!-- <p class="password" id="password"></p> -->
+                    <input type="password" id="password" class="inputText" readonly="readonly" name="password">
+                </li>
+                <li class="changeTab">
+                    <input id="edit" class="clickBtn" type="submit" value="编辑">
+                    <input id="confirm" class="clickBtn" type="submit" value="确认">
+                    <input id="cancle" class="clickBtn" type="buttom" value="取消">
+                </li>
+                <li class="main_inform">
+                    <p class="addressText" id="addressText">收货地址</p>
+                    <!-- <p class="address" id="address"></p> -->
+                    <input type="text" id="address" class="inputText" readonly="readonly" name="address">
+                </li>
+                <li class="changeTab">
+                    <input id="edit" class="clickBtn" type="submit" value="编辑">
+                    <input id="confirm" class="clickBtn" type="submit" value="确认">
+                    <input id="cancle" class="clickBtn" type="hidden" value="取消">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 1.从登陆界面发送的url获取到发送来的当前登录的用户的手机号
+        $(function(){
+            $('#phone').val(oneValues())
+        })
+        function oneValues(){
+            var result;
+            var url = window.location.search
+            if(url.indexOf("?") != -1){
+                result = url.substr(url.indexOf("=") + 1)
+            }
+            return result
+        }
+
+        // 2.只需要获取到当前登录用户的手机号，然后根据手机号从数据库中查询对应用户的密码和收货地址展示在html中
+        var password = $('#password').val()
+        var address = $('#address').val()
+        function submitBtn(){
+            $.ajax({
+                type : "post",
+                url : "/user_inform",
+                data : {
+                    phone : $('#phone').val()
+                },
+                success : function(res,data){
+                    if(res.code == 1){
+                        alert(res.message1+res.message2)
+                        // 2.1从后台获取到密码和收货地址后可以进行修改。若没有设置收货地址，要先设置。
+                        // password = res.message1
+                        // addess = res.message2
+                        // console.log(password,address);
+                    }else{
+                        alert(res.message)
+                    }
+                },
+                error : function(){
+                    alert("出错，请重试。。")
+                }
+            })
+        }
+        
+
+
+        //    其中如果当前用户没有收货地址，需要添加
+
+
+        // 3.jquery实现点击信息后变得按钮，进行对应操作
+        $(function(){
+            
+        })
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

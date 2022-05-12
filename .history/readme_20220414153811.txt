@@ -1,0 +1,24 @@
+html文件说明：
+    main.html----网站主页面。
+    login.html----登录/注册界面。
+    
+
+js文件说明：
+    change_tab.js----登录界面选项卡切换逻辑。
+    show_hide_list.js----左侧菜单栏点击效果，包括：显示和隐藏。
+
+
+public文件夹中存放公共文件，如页面的样式文件
+
+
+views
+
+
+
+
+
+
+
+
+
+

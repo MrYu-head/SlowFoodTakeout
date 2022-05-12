@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" href="../public/less/main_menu.less">
+    <script src="../node_modules/less/dist/less.min.js"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="mainBox" id="mainBox">
+            <!-- 这是左侧商家信息以及简介 -->
+            <div class="left_main" id="left_main">
+                <ul class="shop_list" id="shop_list">
+                    <li class="shop_information">
+                        <p class="shopName">111</p>
+                    </li>
+                    <li class="shop_information">
+                        <p class="minPrice">222</p>
+                    </li>
+                    <li class="shop_information">
+                        <p class="address">333</p>
+                    </li>
+                    <li class="shop_information">
+                        <p class="distance">444</p>
+                    </li>
+                    <li>
+                        <p class="time">555</p>
+
+                    </li>
+                    <li class="shop_information">
+                        <p class="text">欢迎点餐!祝您用餐愉快！</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 这是右侧该商家的详细菜单展示 -->
+            <div class="right_main" id="right_main">
+                <p>ssss</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 点击商家进入该界面后，左侧商家详细信息简介处需要获取到当前点击的a标签的商家名
+        // shopName='张亮麻辣烫'
+        // minPrice='￥20起送"
+        // &address='宝龙城市广场'
+        // &diatance='2.3km'
+        // &time='23分钟'
+
+        // 先获取到要显示的位置，标签
+        var name = document.getElementById("shopName")
+        var price = document.getElementById("minPrice")
+        var add = document.getElementById("address")
+        var dist = document.getElementById("distance")
+        var tim = document.getElementById("time")
+
+        var a = getQueryString();
+        // console.log("这是拿到的数据shopName" + a['shopName'] + a['minPrice']);
+        function getQueryString(){
+            // 获取url中？后边的字符串
+            var url = location.search
+            // 把字符串进行分割，即把每一个(key,value)进行分割,方便后续显示
+            var arr = url.split("&")
+            var theRequest = new Object();
+            if(url.indexOf("?") != -1){
+                var str = url.substr(1)
+                strs = str.split("&")
+                for(var i = 0;i < strs.length;i++){
+                    theRequest[strs[i].split("=")[0]] = decodeURIComponent(strs[i].split("=")[1])
+                    console.log("成功!!!!!!");
+                    // theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1])
+                }
+            }
+            return theRequest
+        }
+        var request = new Object();
+        request = getQueryString();
+        var shopNameData = request["shopName"].toString()
+        var minPriceData = request["minPrice"].toString()
+        var addressData = request["address"].toString()
+        var distanceData = request["distance"].toString()
+        var timeData = request["time"].toString()
+
+
+
+
+    </script>
+</body>
+</html>

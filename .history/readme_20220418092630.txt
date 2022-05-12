@@ -1,0 +1,27 @@
+文件夹说明：
+    src  资源目录
+      --html  html资源
+      --less  less样式文件
+      --js    js文件
+      --img   网站img资源内容
+    router  路由目录
+      --index.js  路由文件
+    
+    
+
+js文件说明：
+    change_tab.js----登录界面选项卡切换逻辑。
+    show_hide_list.js----左侧菜单栏点击效果，包括：显示和隐藏。
+
+
+
+
+
+
+
+
+
+
+
+
+

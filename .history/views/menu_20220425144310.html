@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet/less" type="text/css" href="../public/less/menu.less">
+	<script src="../node_modules/less/dist/less.min.js"></script>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <title>Document</title> -->
+</head>
+<body>
+    <!-- 菜单商家展示界面不需要设置flex弹性盒子，设置普通盒子即可 -->
+    <div class="menuBox" id="menuBox">
+        <div class="menuContainer" id="menuContainer">
+            <!-- 这是菜单总列表 -->
+            <ul class="menuList" id="menuList">
+                <!-- 这是具体到每一个商家展示的招牌菜单 -->
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">张亮麻辣烫</a></p>
+                                <p class="minPrice"><a href="#">￥20起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>宝龙城市广场</p><p>2.3km</p><p>23分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">张三快餐馆</a></p>
+                                <p class="minPrice"><a href="#">￥15起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>幸福小吃街</p><p>2.3km</p><p>23分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_nine.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_seven.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_fifteen.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_thriteen.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">小二烧烤</a></p>
+                                <p class="minPrice"><a href="#">￥20起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>幸福小吃街63号</p><p>2.9km</p><p>43分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_five.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_eight.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_eleven.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">云南过桥米线</a></p>
+                                <p class="minPrice"><a href="#">￥20起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>幸福小吃街20号</p><p>2.3km</p><p>27分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_six.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_fifteen.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_ten.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">志玲餐馆</a></p>
+                                <p class="minPrice"><a href="#">￥25起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>宝龙城市广场4楼23号</p><p>1.4km</p><p>19分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_six.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_eight.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">李四快餐店</a></p>
+                                <p class="minPrice"><a href="#">￥15起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>幸福路230号</p><p>3.7km</p><p>40分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_ten.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_five.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_twelve.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_eleven.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">张亮麻辣烫</a></p>
+                                <p class="minPrice"><a href="#">￥20起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>宝龙城市广场</p><p>2.3km</p><p>23分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">张亮麻辣烫</a></p>
+                                <p class="minPrice"><a href="#">￥20起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>宝龙城市广场</p><p>2.3km</p><p>23分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">张亮麻辣烫</a></p>
+                                <p class="minPrice"><a href="#">￥20起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>宝龙城市广场</p><p>2.3km</p><p>23分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">张亮麻辣烫</a></p>
+                                <p class="minPrice"><a href="#">￥20起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>宝龙城市广场</p><p>2.3km</p><p>23分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="#">张亮麻辣烫</a></p>
+                                <p class="minPrice"><a href="#">￥20起送</a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p>宝龙城市广场</p><p>2.3km</p><p>23分钟</p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

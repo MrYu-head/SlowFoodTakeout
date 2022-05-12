@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" href="../public/less/user_information.less">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/less/dist/less.min.js"></script>
+</head>
+<body>
+    <!-- 个人信息管理界面，展示当前登录的用户的个人信息，包括手机号、密码、收货地址等。 -->
+    <div class="container" id="container">
+        <div class="mainBox" id="mainBox">
+            <ul class="user_main" id="user_main">
+                <!-- <li class="main_inform_img"><span class="main_img" id="main_img"><img src="../public/img/right_toolBsr_img/user_avatar.png" alt=""></span></li>
+                <li class="main_inform"><p>手机号</p><input type="number"></li>
+                <li class="main_inform"><p>密码</p><input type="password"></li>
+                <li class="main_inform"><p>收货地址</p><input type="text"></li> -->
+                <li class="main_inform_img"><span class="main_img" id="main_img"><img src="../public/img/right_toolBsr_img/user_avatar.png" alt=""></span></li>
+                <li class="main_inform">
+                    <p class="phone" id="phone">手机号</p>
+                    <p class="phoneNum" id="phoneNum">111</p>
+                </li>
+                <li class="changeTab">
+                    <input id="edit" class="clickBtn" type="submit" value="编辑">
+                    <input id="cancle" class="clickBtn" type="hidden" value="取消">
+                </li>
+                <li class="main_inform">
+                    <p class="password" id="password">密码</p>
+                    <p class="passwordNum" id="passwordNum">111111</p>
+                </li>
+                <li class="changeTab">
+                    <input id="edit" class="clickBtn" type="submit" value="编辑">
+                    <input id="cancle" class="clickBtn" type="hidden" value="取消">
+                </li>
+                <li class="main_inform">
+                    <p class="address" id="address">收货地址</p>
+                    <p class="addressText" id="addressText">幸福饺子馆</p>
+                </li>
+                <li class="changeTab">
+                    <input id="edit" class="clickBtn" type="submit" value="编辑">
+                    <input id="cancle" class="clickBtn" type="hidden" value="取消">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 1.jquery实现点击信息后变得按钮，进行对应操作
+        $(function(){
+            // 1.首先获取到原先展示的信息
+            var originPhone = $("#phoneNum").html()
+            var originPassword = $("#passwordNum").html()
+            var originAddress = $("#addressText").html()
+            // 2.手机号的点击按钮事件
+            $('#edit').click(function(){
+                // 2.1判断按钮是否是提交按钮submit
+                if($('#edit').attr('value') !== '提交'){
+                    // 2.2把原来的文本覆盖，填充原文到value
+                    $('#phoneNum').html("<input id='inputs' type='text' name='editname' value="+originPhone+">");
+                    // 2.3改变type属性  把取消按钮显示出来
+                    $('#cancle').attr('type','button')
+                    // 2.4改变value属性  把修改改为提交
+                    $('#edit').attr('value','提交')
+                    // 修改信息后，点击保存按钮，将修改后的数据发送到app.js进行更新数据库的操作
+                    $('#edit').click(function(){
+                        $.ajax({
+                            type:"post",
+                            url:"/user_inform",
+                            timeout : 3000,
+                            data:{
+                                phone : $("#phoneNum").html()
+                            },
+                            success : function(res){
+                                if(res.code == 1){
+                                    alert("信息修改成功！！！")
+                                    // alert(res.message)
+                                    // window.location.href = "/main.html";
+                                }else{
+                                    alert(res.message)
+                                }
+                            },
+                            error : function(){
+                                console.info("网络出错。")
+                                alert("修改失败，请重试。。。")
+                            }
+                        })
+                    })
+                }else{
+                    // 2.5
+                    alert($('#inputs').val())
+                }
+            });
+            // 2.6取消按钮点击事件
+            $('#cancle').click(function(){
+                // 2.7改变value属性，并把提交改为编辑
+                $('#edit').attr('value','编辑')
+                // 2.8将原来的文本填充，覆盖
+                $('#phoneNum').html(originPhone)
+                // 2.9将取消按钮隐藏
+                $('#cancle').attr('type','hidden')
+            });
+        })
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

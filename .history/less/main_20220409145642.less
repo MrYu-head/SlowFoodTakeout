@@ -1,0 +1,246 @@
+@floatLeft:left;
+@floatRight:right;
+@absolute:absolute;
+@relative:relative;
+*{margin: 0;padding: 0;}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+	display: block;
+    position: @absolute;
+    .container{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        // ******左侧菜单栏样式******
+        .left_menu{
+            width: 16%;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            float: @floatLeft;
+            position: @relative;
+            #left_menu_list{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(40,60,80);
+                position: @relative;
+                float: @floatLeft;
+                .liMap{
+                    height: 14%;
+                    background-color: rgb(40, 60, 90);
+                    font-size: 50px;
+                    text-align: center;
+                    line-height: 170px;
+                    font-family: "楷体";
+                    color: green;
+                    font-weight: 800;
+                }
+                .liList{
+                    width: 100%;
+                    background-color: rgb(40, 65,85);
+                    // text-align: center;
+                    list-style: none;
+                    line-height: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    position: @relative;
+                    p{
+                        margin: 0;
+                        padding: 0;
+                        color: #BFCBD9;
+                        .iconSpan{
+                            width: 17%;
+                            display: inline-block;
+                            float: @floatLeft;
+                            text-align: center;
+                            img{
+                                vertical-align: middle;
+                            }
+                        }
+                        .textDiscription{
+                            width: 60%;
+                            font-size: 1.7em;
+                            text-align: center;
+                            display: inline-block;
+                            font-family: "楷体";
+                            float: @floatLeft;
+                        }
+                        .clickBtn{
+                            width: 23%;
+                            display: inline-block;
+                            float: @floatLeft;
+                            text-align: center;
+                            img{
+                                vertical-align: middle;
+                                // -webkit-transition: all 0.1s ease;
+                                // -moz-transition: all 0.1s ease;
+                                // -ms-transition: all 0.1s ease;
+                                // -o-transition: all 0.1s ease;
+                                // transition: all 0.1s ease;
+                            }
+                        }  
+                    }
+                    .ulList{
+                        display: none;
+                        li{
+                            height: 50px;
+                            line-height: 50px;
+                            background-color: rgb(30, 45, 60);
+                            list-style: none;
+                            a{
+                                font-size: 1.5em;
+                                padding-left: 28%;
+                                font-family: "楷体";
+                                color: rgb(4, 91, 98);
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                // .liList:active p .clickBtn img{
+                //     -webkit-transform: rotate(-180deg);
+                //     -moz-transform: rotate(-180deg);
+                //     -ms-transform: rotate(-180deg);
+                //     -o-transform: rotate(-180deg);
+                //     transform: rotate(-180deg);
+                // } 
+                .imgLi{
+                    width: 100%;
+                    height: 21%;
+                    background-color: rgb(40, 60,80);
+                    position: @absolute;
+                    bottom: 0;
+                    .imgLiBox{
+                        text-align: center;
+                    }
+                    img{
+                        width: 140px;
+                        height: 140px;
+                        margin-left: 0 auto;
+                    }
+                    p{
+                        font-size: 1.2em;
+                        color: #696969;
+                    }
+                    p:nth-of-type(1){
+                        margin-top: 1%;
+                    }
+                }
+            }
+        }
+
+
+
+        // ******中间显示区域样式******
+        .main_screen{
+            width: 81%;
+            height: 100%;
+            background-color: #c1cbd7;
+            float: @floatLeft;
+            display: flex;
+            margin: 0;
+            position: @relative;
+        }
+
+
+
+        // ******右侧工具栏样式******
+        .right_toolbar{
+            width: 3%;
+            height: 100%;
+            background-color: rgb(40, 70,80);
+            // background-color: rgb(23, 27, 31);
+            margin: 0;
+            float: @floatRight;
+            .toolList{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                .toolLi{
+                    height: 10%;
+                    margin: 20% 0 30%;
+                    // border-bottom: 2px solid rgb(4, 60, 80);
+                    // text-decoration: line-through;
+                    // text-decoration-color: rgb(4, 60, 80);
+                    p{
+                        img{
+                            width: 70%;
+                            height: 70%;
+                            // 图片居中显示
+                            display: block;
+                            margin: 0 auto;
+                            padding: 0;
+                        }
+                    }
+                    p:hover{
+                        // 鼠标移动到图片上时图片变化
+                        img{
+                            width: 70%;
+                            height: 70%;
+                            display: block;
+                            margin: 0 auto;
+                            padding: 0;
+                        }
+                    }
+                    ul{
+                        width: 8%;
+                        height: 14%;
+                        border: 1px solid black;
+                        position: @absolute;
+                        top: 2%;
+                        right: 3%;
+                    }
+                }
+                
+                // .toolLi:nth-of-type(3){
+                //     p{
+                //         img{
+                //             width: 86%;
+                //             height: 86%;
+                //         }
+                //     }
+                // }
+                // .toolLi:nth-of-type(4){
+                //     p{
+                //         font-size: 13px;
+                //         font-weight: 500;
+                //     }
+                // }
+                // .toolLi:nth-of-type(5){
+                //     p{
+                //         img{
+                //             width: 100%;
+                //             height: 100%;
+                //         }
+                //     }
+                // }
+                // .toolLi:nth-of-type(6){
+                //     p{
+                //         img{
+                //             width: 66%;
+                //             height: 66%;
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+}
+
+
+

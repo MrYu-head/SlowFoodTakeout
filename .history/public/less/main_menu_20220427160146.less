@@ -1,0 +1,162 @@
+@leftfloat:left;
+@rightfloat:right;
+@relative:relative;
+@absolute:absolute;
+*{
+    margin: 0;
+    padding: 0;
+    body{
+        width: 100%;
+        height:100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background-color: rgb(190, 200, 200);
+        position: @absolute;
+        .container{
+            width: 100%;
+            height:100%;
+            border: 0;
+            .mainBox{
+                width: 100%;
+                height:100%;
+                position: @relative;
+                .left_main{
+                    width: 25%;
+                    height: 100%;
+                    float: @leftfloat;
+                    background-color: rgb(211, 211, 211);
+                    .shop_list{
+                        display: inline;
+                        list-style: none;
+                        .shop_information{
+                            height: 8%;
+                            text-align: left;
+                            p{
+                                height: 100%;
+                                font-size: 2em;
+                                color: #4E4E49;
+                            }
+                        }
+                        li:nth-of-type(1){
+                            height: 12%;
+                            text-align: center;
+                            .shopName{
+                                font-size: 3em;
+                            }
+                        }
+                        .order_bag{
+                            height: 16%;
+                            margin-top: 20%;
+                            text-align: center;
+                            img{
+                                width: 30%;
+                                height: 100%;
+                                margin-left: 5%;
+                                float: @leftfloat;
+                            }
+                            ul{
+                                width: 50%;
+                                height: 100%;
+                                list-style: none;
+                                float: @rightfloat;
+                                text-align: center;
+                                border-radius: 10px;
+                                background-color: rgb(190, 190, 190);
+                                li{
+                                    width: 100%;
+                                    height: 100%;
+                                    input{
+                                        height: 100%;
+                                        font-size: 4em;
+                                    }
+                                }
+                            }
+                        }
+                        .orderPay{
+                            height: 8%;
+                            text-align: center;
+                            margin-top: 30%;
+                            input{
+                                width: 20%;
+                                height: 70%;
+                            }
+                        }
+                    }
+                }
+                .right_main{
+                    width: 75%;
+                    height: 100%;
+                    float: @rightfloat;
+                    background-color: rgb(190, 200, 200);
+                    .main_food_ul{
+                        width: 75%;
+                        height: 100%;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        border: 0;
+                        position: @absolute;
+                        li{
+                            width: 80%;
+                            height: 30%;
+                            margin: 5% 0 5% 10%;
+                            border-radius: 30px;
+                            background-color: burlywood;
+                            position: @relative;
+                            .menu_list_name{
+                                width: 20%;
+                                height: 100%;
+                                float: @leftfloat;
+                                text-align: center;
+                                p{
+                                    height: 100%;
+                                    font-size: 3em;
+                                    // 以下两行为了让文字居中显示
+                                    display: flex;
+                                    align-items: center;
+                                    margin-left: 10%;
+                                }
+                            }
+                            .menu_list_img{
+                                width: 50%;
+                                height: 100%;
+                                float: @leftfloat;
+                                text-align: center;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: inline-block;
+                                    // border-radius: 20px;
+                                }
+                            }
+                            .menu_list_discrib{
+                                width: 26%;
+                                height: 100%;
+                                float: @leftfloat;
+                                margin-left: 4%;
+                                p{
+                                    height: 30%;
+                                    font-size: 1.4em;
+                                    display: flex;
+                                    align-items: center;
+                                    text-align: left;
+                                }
+                                p:nth-of-type(3),p:nth-of-type(4){
+                                    width: 50%;
+                                    height: 30%;
+                                }
+                                input{
+                                    width: 25%;
+                                    height: 50%;
+                                    font-size: 1.2em;
+                                    border-radius: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

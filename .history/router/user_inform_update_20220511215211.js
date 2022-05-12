@@ -1,0 +1,64 @@
+// 用户信息修改后的更新数据库接口
+const express = require("express")
+const db = require("../db")
+const router = express.Router()
+
+router.get('/',function(req,res){
+    res.sendFile(__dirname + '/' + 'views/user_information2.html')
+})
+// 个人信息修改接口中的查询用户信息
+router.post("/",function(req,res){
+    // 1.修改手机号
+    // 这是一开始的手机号
+    var originPhone = req.body.oldPhone
+    console.log("111" + originPhone); 
+    // 这是修改后的手机号
+    var phoneChange = req.body.phoneChange
+    console.log("这是前端修改后的手机号："+phoneChange);
+    if(phoneChange){
+        db.updateUser( phoneChange ,originPhone, function (err,data) { 
+        if(!err){
+            res.json({code:-1,message:"手机号修改失败，请重试222。"})
+        }else{
+            console.log("这是因为成功了，");
+        }
+    });
+    }
+
+    // 2.修改密码
+    // 这是一开始的密码
+    var originPassword = req.body.oldPassword
+    console.log("111" + originPassword); 
+    // 这是修改后的密码
+    var phoneChange = req.body.phoneChange
+    console.log("这是前端修改后的密码："+phoneChange);
+    if(phoneChange){
+        db.updateUser( phoneChange ,originPhone, function (err,data) { 
+        if(!err){
+            res.json({code:-1,message:"密码修改失败，请重试。"})
+        }else{
+            console.log("修改密码成功。");
+        }
+    });
+    }
+
+    // 3.修改手机号
+    // 这是一开始的手机号
+    var originPhone = req.body.oldPhone
+    console.log("111" + originPhone); 
+    // 这是修改后的手机号
+    var phoneChange = req.body.phoneChange
+    console.log("这是前端修改后的手机号："+phoneChange);
+    if(phoneChange){
+        db.updateUser( phoneChange ,originPhone, function (err,data) { 
+        if(!err){
+            res.json({code:-1,message:"手机号修改失败，请重试222。"})
+        }else{
+            console.log("这是因为成功了，");
+        }
+    });
+    }
+    
+})
+
+module.exports = router;

@@ -4,7 +4,7 @@
 // 增 删 改 查
 var mongoClient = require("mongodb").MongoClient;
 
-var url = 'mongodb://127.0.0.1:27017/'; // 从数据库进行登录数据查询  用户登录
+var url = 'mongodb://127.0.0.1:27017/'; // 1.从数据库进行登录数据查询  用户登录
 
 function searchUser(whereStr, callback) {
   mongoClient.connect(url, {
@@ -20,7 +20,7 @@ function searchUser(whereStr, callback) {
       db.close();
     });
   });
-} // 插入数据  用户注册
+} // 2.插入数据，主要用户用户注册
 
 
 function insertUser(myobj, callback) {
@@ -36,7 +36,7 @@ function insertUser(myobj, callback) {
       db.close();
     });
   });
-} // 修改数据，个人信息修改
+} // 3.修改数据，主要用于个人信息修改
 
 
 function updateUser(myObj, callback) {

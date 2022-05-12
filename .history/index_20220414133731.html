@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="SHORTCUT ICON" href="../img//left_bar_img/websiteLogo.png">
+	<!-- <link rel="stylesheet" href="./node_modules/vue/vue.js">
+	<link rel="stylesheet" href="./node_modules/element-ui/lib/theme-chalk/index.css">
+	<link rel="stylesheet" href="./node_modules/element-ui/lib/index.js"> -->
+	<link rel="stylesheet/less" href="./less/index.less" />
+	<script src="../node_modules/less/dist/less.min.js"></script>
+    <title>慢膳外卖-只做最适合你的外卖！</title>
+	
+</head>
+<body>
+	<div class="login_regist" id="login_regist">
+		<div class="container" id="container">
+			<form action="http://127.0.0.1:5500/html/main.html" method="get">
+				<div class="form_item_head">
+					<p>慢膳外卖</p>
+				</div>
+				<div class="form_item">
+					<span><img src="./img/login_regist_img/phone_user_img.png" alt=""></span>
+					<input type="number" id="phoneNum" placeholder="请输入手机号">
+				</div>
+				<div class="form_item">
+					<span><img src="./img//login_regist_img/password_lock.png" alt=""></span>
+					<input type="password" id="passNum" placeholder="请输入密码">
+				</div>
+				<div class="form_item">
+					<input type="submit" id="loginBtn" value="登录">
+					<input type="button" id="clearInput" value="重置">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script>
+		// js实现简单的用户登陆验证功能
+		var phoneNum = document.getElementById("phoneNum")
+		var password = document.getElementById("passNum")
+
+		var loginBtn = document.getElementById("loginBtn")
+		var cleatBtn = document.getElementById("clearInput")
+
+		// 重置输入框内容
+		clearBtn.onclick = () => {
+			phoneNum.value = ""
+			password.value = ""
+
+			focus
+		}
+
+
+
+
+	</script>
+
+
+</body>
+</html>

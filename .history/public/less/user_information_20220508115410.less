@@ -1,0 +1,32 @@
+// 用户个人信息管理界面样式文件
+
+@leftfloat:left;
+@rightfloat:right;
+@relative:relative;
+@absolute:absolute;
+*{
+    margin: 0;
+    padding: 0;
+    body{
+        float: @leftfloat;
+
+        border: 0;
+        position: @absolute;
+        .container{
+            position: @relative;
+            .mainBox{
+                margin: 0;
+                padding: 0;
+                .user_main{
+                    list-style: none;
+                    li{
+                        width: 50%;
+                        height: 10%;
+                        border-radius: 10px;
+                        position: @relative ;
+                    }
+                }
+            }
+        }
+    }
+}

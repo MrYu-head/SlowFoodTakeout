@@ -1,0 +1,96 @@
+@leftfloat:left;
+@rightfloat:right;
+@relative:relative;
+@absolute:absolute;
+*{
+    margin: 0;
+    padding: 0;
+    body{
+        width: 100%;
+        height:100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        position: @absolute;
+        .container{
+            width: 100%;
+            height:100%;
+            border: 0;
+            .mainBox{
+                width: 100%;
+                height:100%;
+                position: @relative;
+                .left_main{
+                    width: 25%;
+                    height: 100%;
+                    float: @leftfloat;
+                    background-color: rgb(211, 211, 211);
+                    .shop_list{
+                        display: inline;
+                        list-style: none;
+                        li{
+                            height: 10%;
+                            text-align: left;
+                            p{
+                                height: 100%;
+                                font-size: 2em;
+                                color: #4E4E49;
+                            }
+                        }
+                        li:nth-of-type(1){
+                            height: 12%;
+                            text-align: center;
+                            .shopName{
+                                font-size: 3em;
+                            }
+                        }
+                    }
+                }
+                .right_main{
+                    width: 75%;
+                    height: 100%;
+                    float: @rightfloat;
+                    background-color: rgb(190, 200, 200);
+                    .main_food_ul{
+                        height: 100%;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        border: 0;
+                        li{
+                            width: 80%;
+                            height: 30%;
+                            margin-left: 10%;
+                            border-radius: 30px;
+                            background-color: burlywood;
+                            .menu_list_name{
+                                width: 20%;
+                                height: 100%;
+                                float: @leftfloat;
+                                text-align: center;
+                                p{
+                                    height: 40%;
+                                    margin: 0 auto;
+                                    font-size: 3em;
+                                    text-align: center;
+                                }
+                            }
+                            .menu_list_img{
+                                width: 50%;
+                                height: 100%;
+                                float: @leftfloat;
+                                text-align: center;
+                                img{
+                                    width: 80%;
+                                    height: 80%;
+                                    // margin: 6%;
+                                    border-radius: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

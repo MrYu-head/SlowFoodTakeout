@@ -27,7 +27,13 @@ app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   res.header('Access-Control-Allow-Headers', 'Content-Type');
-  next();
+
+  if (req.method == 'OPTIONS') {
+    // 让options请求快速返回
+    res.sendStatus(200);
+  } else {
+    next();
+  }
 }); // 解析application/json
 
 app.use(bodyParser.json()); // 解析url编码
@@ -65,8 +71,10 @@ app.get('/order', function (req, res) {
 }); // 个人信息界面
 
 app.get('/user_inform', function (req, res) {
-  // res.sendFile(__firname + '/' + '/views/user_information.html')
-  res.sendFile(__firname + '/' + 'user_information2.html');
+  res.sendFile(__firname + '/' + '/views/user_information2.html');
+});
+app.get('/user_inform_update', function (req, res) {
+  res.sendFile(__firname + '/' + '/views/user_information2.html');
 }); // 1.为登录操作添加接口
 
 app.post("/login", function (req, res) {
@@ -147,40 +155,86 @@ app.post('/register', function (req, res) {
       }
     });
   }
-}); // 3.个人信息修改接口
+}); // 3.个人信息修改接口中的查询用户信息
 
-app.post('/user_inform', function (req, res) {
-  var phone = req.body.phone / db.searchUser({
+app.post("/user_inform", function (req, res) {
+  var phone = req.body.phone; // console.log("这是req.body:",req.body);
+
+  console.log("这是获取到的手机号：" + phone);
+  db.searchUser({
     phone: phone
   }, function (result) {
-    if (result.length > 0 && result[0].phone == phone) {
-      res.json({
-        code: 1,
-        message: "修改手机号成功！！！"
-      });
+    if (result.length > 0) {
+      if (result[0].phone == phone) {
+        res.json({
+          code: 1,
+          message1: result[0].password,
+          message2: result[0].address
+        }); // 查询用户信息成功后，直接在此处进行修改的逻辑
+
+        db.updateUser({
+          phone: phone
+        }, function (result) {
+          if (result.length > 0 && result[0].phone == phone) {
+            res.json({
+              code: 1,
+              message: "修改手机号成功！！！"
+            });
+          } else {
+            res.json({
+              code: -1,
+              message: "修改手机号失败,请重试。"
+            });
+            db.updateUser({
+              phone: phone
+            }, function (updateResult) {
+              if (updateResult == phone) {
+                res.json({
+                  code: -1,
+                  message: "修改的手机号与原手机号重复，修改失败。"
+                });
+              } else {
+                res.json({
+                  code: 1,
+                  message: "修改手机号成功！！！"
+                });
+              }
+            });
+          }
+        });
+      } else {
+        res.json({
+          code: -1,
+          message: "用户信息查询失败，请重试1。"
+        });
+      }
     } else {
       res.json({
         code: -1,
-        message: "修改手机号失败,请重试。"
-      });
-      db.updateUser({
-        phone: phone
-      }, function (updateResult) {
-        if (updateResult == phone) {
-          res.json({
-            code: -1,
-            message: "修改的手机号与原手机号重复，修改失败。"
-          });
-        } else {
-          res.json({
-            code: 1,
-            message: "修改手机号成功！！！"
-          });
-        }
+        message: "用户信息查询失败，请重试2。"
       });
     }
-  }); // }
-}); // 从数据库获取shop表中的商家以及菜单信息展示在menu.html中
+  });
+}); // // 4.个人信息修改接口
+// app.post('/user_inform',function(req,res){
+//     var phone = req.body.phone
+//     console.log("这是点击确认发送来的新的手机号：",phone);
+//     db.updateUser({phone : phone},function(result){
+//         if(result.length > 0 && result[0].phone == phone){
+//             res.json({code:1,message:"修改手机号成功！！！"})
+//         }else{
+//             res.json({code:-1,message:"修改手机号失败,请重试。"})
+//             db.updateUser({phone : phone},function(updateResult){
+//                 if(updateResult == phone){
+//                     res.json({code:-1,message:"修改的手机号与原手机号重复，修改失败。"})
+//                 }else{
+//                     res.json({code:1,message:"修改手机号成功！！！"})
+//                 }
+//             })
+//         }
+//     });
+// })
+// 从数据库获取shop表中的商家以及菜单信息展示在menu.html中
 // app.post('/menu',function(erq,res){
 //     db.searchUser
 // })

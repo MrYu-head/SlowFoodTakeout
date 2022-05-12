@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="SHORTCUT ICON" href="./public/img//left_bar_img/websiteLogo.png">
+	<link rel="stylesheet/less" href="./public/less/index.less" />
+	<script src="./node_modules/less/dist/less.min.js"></script>
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <title>慢膳外卖-只做最适合你的外卖！</title>
+	
+</head>
+<body>
+	<div class="login_regist" id="login_regist">
+		<div class="container" id="container">
+			<!-- <form action="/main" method="post" id="loginForm" enctype="application/x-www-form-urlencoded"> -->
+			<div class="loginForm">
+				<div class="form_item_head">
+					<p>登录</p>
+					<p><a href="register.html">注册</a></p>
+				</div>
+				<div class="form_item">
+					<span><img src="./public/img/login_regist_img/phone_user_img.png" alt=""></span>
+					<input type="number" id="phoneNum" name="phone" placeholder="请输入手机号">
+				</div>
+				<div class="form_item">
+					<span><img src="./public/img//login_regist_img/password_lock.png" alt=""></span>
+					<input type="password" id="passNum" name="password" placeholder="请输入密码">
+				</div>
+				<div class="form_item">
+					<input type="submit" id="loginBtn" onclick="submit()" value="登录">
+					<input type="reset" id="clearInput" value="重置">
+				</div>
+			</div>
+			<!-- </form> -->
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+		// // 1. 方法可行，可以获取到数据
+		function submit(){
+			// trim()去掉字符串首尾的空格
+			$.ajax({
+				type:"post",
+				// dataType : "json",
+				// contentType : 'application/json;charset=UTF-8',
+				url:"/login",
+				timeout : 3000,  //请求超时时间
+				data:{
+					phone : $("#phoneNum").val(),
+					password : $("#passNum").val()
+				},
+				success : function(res,data){
+					if(res.code == 1){
+						alert(res.message)
+						window.location.href = "/main.html";
+						// console.log("这是拿到的手机号："+userPhone);
+					}else{
+						alert(res.message)
+					}
+				},
+				error : function(){
+					console.info("网络出错。")
+					alert("登陆失败，请重试。。。")
+				}
+			})
+		}
+				
+		
+
+
+	</script>
+
+
+</body>
+</html>

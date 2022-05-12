@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body,select,input,button,textarea{font: 14px/26px PingFangSC-Regular,Tahoma,"Microsoft Yahei",sans-serif,Arial}
+        a:link, a:visited {
+            color: #333;
+            text-decoration: none;
+        }
+        a:hover, a:active, .post-meta-item a:hover {
+            color: #0d9bff;
+        }
+        .fl{float:left}
+        .fr{float:right}
+        .mb10 {
+            margin-bottom: 10px;
+        }
+        .mt20 {
+            margin-top: 20px;
+        }
+        .gray {
+            color: #999;
+        }
+        h1,h2,h3,h4,h5,h6{font-size:16px; font-weight:500}
+        .cutFont{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+        .clearfix:after{content:" ";display:block;height:0;clear:both;visibility:hidden}
+        .clearfix{zoom:1}
+        .index-tab-bd-list {
+            background-color: #fff;
+            width: 838px;
+            border: 1px solid #ddd;
+            margin: 20px auto;
+        }
+        .entry{
+            padding: 25px;
+            border-bottom: 1px dashed #ddd;
+        }
+        .entry:hover{
+            background-color: #f9f9f9;
+        }
+        .post-thumb{
+            position: relative;
+            width: 220px;
+            height: 140px;
+            border-radius: 5px;
+            box-shadow: 0 0 1px #B5B7B0;
+            overflow: hidden;
+        }
+        .post-tag{
+            background-color: rgba(0,0,0,.6);
+            padding: 0 10px;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            z-index: 9;
+            color: #fff;
+            font-size: 12px;
+        }
+        .post-tag a{
+            
+        }
+        .post-thumb img{
+            width: 100%;
+            transition:all 0.5s ease;
+
+        }
+        .post-thumb img:hover{
+            transform: scale(1.05);
+        }
+        .post-entry{
+            width: 550px;
+        }
+
+        .post-title{
+            font-size: 18px;
+        }
+
+        .post-entry .post-edit-link{
+            position: absolute;
+            right: 0;
+            top: -5px;
+            font-size: 12px
+        }
+        .entry-foot>span{
+            margin-right: 10px
+        }
+        .author-avatar a{ color: #999 }
+        .author-avatar a:hover{color: #0d9bff}
+        .avatar-small{
+            margin-right: 5px;
+            vertical-align: middle;
+            width: 26px;
+        }
+        .avatar-small .avatar {
+            border-radius: 50%;
+            height: 26px;
+            width: 26px;
+        }
+        .py10{
+            box-sizing: border-box;
+            padding: 10px 20px;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="index-tab-bd-list py10">
+        显示以下分类文章：
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+        </select>
+    </div>
+    <div class="index-tab-bd-list">   
+        <!-- 第一篇文章 -->
+        <div class="entry clearfix">
+            <div class="post-thumb thumbnail fl">
+                <!-- 分类名称： -->
+                <span class="post-tag">观点</span>
+                <!-- 文章链接 -->
+                <a href="https://www.disanping.com/?p=619" class="thumb-link" rel="bookmark">
+                    <!-- 缩略图 -->
+                    <img width="264" height="168" src="https://www.disanping.com/wp-content/uploads/2020/08/tiktok-264x168.jpg" class="wp-post-image" alt="">
+                </a>
+            </div>
+            <div class="post-entry posir fr">
+                <a href="https://www.disanping.com/?p=619" class="post-link block" target="_blank">
+                    <!-- 文章标题 -->
+                    <h2 class="post-title cutFont mb10">
+                        封禁Tik Tok之下，思考逆思维                
+                    </h2>
+                    <!-- 文章摘要 -->
+                    <p class="entry-content brown">
+                       封禁一词，感觉已出现了很久了。从最开始的实体名单风波开始，中美两国之间的贸易战断断续续的经历了这么长的历程。也就只有心直口臭，敢言乱语，说话只经过屁眼...   
+                    </p>
+                </a>
+                <div class="entry-foot mt20 gray clearfix">
+                    <!-- 文章作者 -->
+                    <span itemprop="author" class="author-avatar">
+                        <a href="#">阿飞</a>
+                    </span>
+                    <!-- 文章发布日期 -->
+                    <span class="post-date">2020年08月04日</span> 
+                </div> 
+            </div>
+        </div> 
+        <!-- 第一篇文章结束 -->
+        <!-- 第2篇文章 -->
+        <div class="entry clearfix">
+            <div class="post-thumb thumbnail fl">
+                <!-- 分类名称： -->
+                <span class="post-tag">观点</span>
+                <!-- 文章链接 -->
+                <a href="https://www.disanping.com/?p=619" class="thumb-link" rel="bookmark">
+                    <!-- 缩略图 -->
+                    <img width="264" height="168" src="https://www.disanping.com/wp-content/uploads/2020/08/tiktok-264x168.jpg" class="wp-post-image" alt="">
+                </a>
+            </div>
+            <div class="post-entry posir fr">
+                <a href="https://www.disanping.com/?p=619" class="post-link block" target="_blank">
+                    <!-- 文章标题 -->
+                    <h2 class="post-title cutFont mb10">
+                        封禁Tik Tok之下，思考逆思维                
+                    </h2>
+                    <!-- 文章摘要 -->
+                    <p class="entry-content brown">
+                       封禁一词，感觉已出现了很久了。从最开始的实体名单风波开始，中美两国之间的贸易战断断续续的经历了这么长的历程。也就只有心直口臭，敢言乱语，说话只经过屁眼...   
+                    </p>
+                </a>
+                <div class="entry-foot mt20 gray clearfix">
+                    <!-- 文章作者 -->
+                    <span itemprop="author" class="author-avatar">
+                        <a href="#">阿飞</a>
+                    </span>
+                    <!-- 文章发布日期 -->
+                    <span class="post-date">2020年08月04日</span> 
+                </div> 
+            </div>
+        </div> 
+        <!-- 第2篇文章结束 -->
+    </div>
+
+    <script>
+
+    $("select").change(function(){
+        $.ajax({
+             // 如果获取数据的方式为get,type这一行可省
+             // 如果值为get，那么这一行可以省略
+             type:"post",
+             // 数据源：json的地址
+             // 本地的地址："json/school.json"
+             // 在线的json地址（接口地址）：https://www.disanping.com/wp-admin/admin-ajax.php?action=getJson&cat=2
+             url:"https://www.disanping.com/wp-admin/admin-ajax.php?action=getJson&cat="+$("select").val(),
+             // success是一个事件属性，当数据获取成功后会自动执行
+             success:function(res){
+                 // res相当于JSON.parse(xhr.responseText);
+                 console.log(res);
+                 // 在这里获取了你要的数据后，ajax的工作就完成了，接下来就需要使用JSON解析的知识去解析或处理该数据，并且把它渲染到页面中
+                 var html="";
+                 // 
+                 $.each(res,function(i,t){
+                    console.log(t);
+                    html+=`<div class="entry clearfix">
+            <div class="post-thumb thumbnail fl">
+                <!-- 分类名称： -->
+                <span class="post-tag">${t.post_category}</span>
+                <!-- 文章链接 -->
+                <a href="${t.post_url}" class="thumb-link" rel="bookmark">
+                    <!-- 缩略图 -->
+                    <img width="264" height="168" src="${t.img}" class="wp-post-image" alt="">
+                </a>
+            </div>
+            <div class="post-entry posir fr">
+                <a href="https://www.disanping.com/?p=619" class="post-link block" target="_blank">
+                    <!-- 文章标题 -->
+                    <h2 class="post-title cutFont mb10">
+                        ${t.post_title}               
+                    </h2>
+                    <!-- 文章摘要 -->
+                    <p class="entry-content brown">
+                       ${t.post_excerpt}   
+                    </p>
+                </a>
+                <div class="entry-foot mt20 gray clearfix">
+                    <!-- 文章作者 -->
+                    <span itemprop="author" class="author-avatar">
+                        <a href="#">${t.post_author}</a>
+                    </span>
+                    <!-- 文章发布日期 -->
+                    <span class="post-date">${t.post_date}</span> 
+                </div> 
+            </div>
+        </div>`
+        // 将HTML文档放到指定的div中
+        $(".index-tab-bd-list").eq(1).html(html);
+                 });
+             },
+             error:function(){
+                 alert("获取失败，请稍后再试！");
+             }
+
+        });
+
+    })
+    </script>
+</body>
+</html>

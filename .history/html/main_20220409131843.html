@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<link rel="SHORTCUT ICON" href="../img//left_bar_img/websiteLogo.png">
+	<link rel="stylesheet/less" type="text/css" href="../less/main.less" />
+	<script src="../node_modules/less/dist/less.min.js"></script>
+	<script src="../node_modules/jquery/jquery-3.3.1.min.js"></script>
+	<title>慢膳外卖--只做最适合您的外卖</title>
+</head>
+<body style="overflow: -Scroll;overflow-y: hidden;overflow-x: hidden;">
+	<div class="container"> 
+		<!-- 左侧菜单栏 -->
+		<div class="left_menu" id="left_menu">
+			<ul id="left_menu_list" class="left_menu_list">
+				<li class="liMap">
+					慢膳外卖
+				</li>
+				<li class="liList">
+					<p onclick="show_hide_menu(ulList1)">
+						<span class="iconSpan"><img src="../img/left_bar_img/food.png" alt=""></span>
+						<span class="textDiscription">外卖美食</span>
+						<span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" ></span>
+					</p>
+					<ul class="ulList" id="ulList1" style="display: none;">
+						<li><a href="">外卖美食</a></li>
+					</ul>
+				</li>
+				<li class="liList">
+					<p onclick="show_hide_menu(ulList2)">
+						<span class="iconSpan"><img src="../img/left_bar_img/order.png" alt=""></span>
+						<span>订单管理</span>
+						<span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span>
+					</p>
+					</p>
+					<ul class="ulList" id="ulList2" style="display: none;">
+						<li><a href="">历史订单</a></li>
+						<li><a href="">订单统计</a></li>
+					</ul>
+				</li>
+				<li class="liList">
+					<p onclick="show_hide_menu(ulList3)">
+						<span class="iconSpan"><img src="../img/left_bar_img/personal_information.png" alt=""></span>
+						<span>个人信息管理</span>
+						<span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span>
+					</p>
+					</p>
+					<ul class="ulList" id="ulList3" style="display: none;">
+						<li><a href="">我的信息</a></li>
+					</ul>
+				</li>
+				<li class="liList">
+					<p onclick="show_hide_menu(ulList4)">
+						<span class="iconSpan"><img src="../img/left_bar_img/position.png" alt=""></span>
+						<span>地址管理</span>
+						<span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span>
+					</p>
+					</p>
+					<ul class="ulList" id="ulList4" style="display: none;">
+						<li><a href="">我的收获地址</a></li>
+						<li><a href="">添加新地址</a></li>
+					</ul>
+				</li>
+				<li class="liList">
+					<p onclick="show_hide_menu(ulList5)">
+						<span class="iconSpan"><img src="../img/left_bar_img/red_enevlope_card.png" alt=""></span>
+						<span>红包&卡券</span>
+						<span><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span>
+					</p>
+					</p>
+					<ul class="ulList" id="ulList5" style="display: none;">
+						<li><a href="">已获得</a></li>
+						<li><a href="">已使用</a></li>
+						<li><a href="">已过期</a></li>
+					</ul>
+				</li>
+				<li class="liList">
+					<p onclick="show_hide_menu(ulList6)">
+						<span class="iconSpan"><img src="../img/left_bar_img/data.png" alt=""></span>
+						<span>数据统计</span>
+						<span class="clickBtn"><img class="iconImg" src="../img/left_bar_img/change_tab_down.png" alt=""></span>
+					</p>
+					</p>
+					<ul class="ulList" id="ulList6" style="display: none;">
+						<li><a href="">外卖数据统计</a></li>
+					</ul>
+				</li>
+				<li class="imgLi">
+					<div class="imgLiBox">
+						<img src="../img/left_bar_img/Logo.png">
+						<p>扫描二维码下载手机App</p>
+						<p>点餐更快捷！</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 右侧/中间屏幕 -->
+		<div class="main_screen" id="main_screen">
+		</div>
+		<!-- 右侧工具栏 -->
+		<div class="right_toolbar" id="right_toolbar">
+			<ul class="toolList" id="toolList">
+				<li class="toolLi">
+					<p><img src="../img//right_toolBsr_img/user_avatar.png" class="user_inform_img"></p>
+					<ul class="user_inform" id="user_inform" style="display: none;">
+						<li><img src="../img//right_toolBsr_img/user_avatar.png" alt=""></li>
+						<li><p>张三</p></li>
+						<li><p>123456789</p></li>
+						<li><p>切换账号</p><p>退出登录</p></li>
+					</ul>
+				</li>
+				<li class="toolLi">
+					<p><img src="../img//right_toolBsr_img/light_mode.png" alt=""></p>
+				</li>
+				<li class="toolLi" id="full_screen">
+					<p><img src="../img/right_toolBsr_img/fall_screen.png" alt=""></p>
+				</li>
+				<li class="toolLi">
+					<p>[zh/中文]</span>
+					<p style="display: none;">[en/英文]</p>
+				</li>
+				<li class="toolLi">
+					<p><img src="../img/right_toolBsr_img/ER_code.png" alt=""></p>
+				</li>
+				<li class="toolLi">
+					<p><img src="../img/right_toolBsr_img/contact_with_us.png" alt=""></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		// 二级菜单列表展开与收缩
+		var r = 0
+		var img = document.getElementsByClassName("iconImg")
+		function show_hide_menu(ulId){
+			if(ulId.style.display == "none"){
+				ulId.style.display = "block"
+				$(img.iconImg).click
+				r += 180
+				
+			}else{
+				ulId.style.display = "none"
+			}
+		}
+
+		$(img.iconImg).click(function(){
+			r + 180
+			$(this).css('transform','rotate(' + r + 'deg)')
+		})
+
+
+		// 右侧工具栏全屏显示逻辑
+		let html = document.querySelector("html")
+		let fullScreenBtn = document.getElementById("full_screen")
+		fullScreenBtn.onclick = () => {
+			html.requestFullscreen()
+			.then(() => {
+				console.log("网页全屏显示！");
+			})
+			.catch(() => {
+				console.log("网页全屏显示失败!");
+			})
+		}
+
+
+		
+
+	</script>
+</body>
+</html>
