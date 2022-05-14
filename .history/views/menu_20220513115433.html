@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet/less" type="text/css" href="../public/less/menu.less">
+	<script src="../node_modules/less/dist/less.min.js"></script>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../public/js/getParams.js"></script>
+</head>
+<body>
+    <!-- 菜单商家展示界面不需要设置flex弹性盒子，设置普通盒子即可 -->
+    <div class="menuBox" id="menuBox">
+        <div class="menuContainer" id="menuContainer">
+            <!-- 这是菜单总列表 -->
+            <ul class="menuList" id="menuList">
+                <!-- 这是具体到每一个商家展示的招牌菜单 -->
+                <li class="shop_overview">
+                    <!-- 这是li中包含的当前商家介绍的盒子 -->
+                    <div class="shop_discribe">
+                        <!-- 这是左侧名称、价格、地址介绍 -->
+                        <div class="left_discribe">
+                            <!-- 这是店名+金额 -->
+                            <div class="name_price_show">
+                                <p class="shopName"><a class="shopNameA" href="../views/shop_main_menu.html">张三麻辣烫店</a></p>
+                                <p class="minPrice"><a class="minPriceA"></a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p class="address"></p>
+                                <p class="distance"></p>
+                                <p class="timeout"></p> 
+                            </div>  
+                        </div>
+                        <!-- 这是右侧招牌菜展示区域 -->
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <div class="shop_discribe">
+                        <div class="left_discribe">
+                            <div class="name_price_show">
+                                <p class="shopName"><a class="shopNameA" href="../views/shop_main_menu.html">李四麻辣烫店</a></a></p>
+                                <p class="minPrice"><a class="minPriceA"></a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p class="address"></p>
+                                <p class="distance"></p>
+                                <p class="timeout"></p> 
+                            </div>  
+                        </div>
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_nine.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_seven.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_fifteen.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_thriteen.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <div class="shop_discribe">
+                        <div class="left_discribe">
+                            <div class="name_price_show">
+                                <p class="shopName"><a class="shopNameA" href="../views/shop_main_menu.html">王五烧烤店</a></p>
+                                <p class="minPrice"><a class="minPriceA"></a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p class="address"></p>
+                                <p class="distance"></p>
+                                <p class="timeout"></p> 
+                            </div>  
+                        </div>
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_five.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_eight.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_eleven.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <div class="shop_discribe">
+                        <div class="left_discribe">
+                            <div class="name_price_show">
+                                <p class="shopName"><a class="shopNameA" href="../views/shop_main_menu.html">粗粮煎饼店</a></p>
+                                <p class="minPrice"><a class="minPriceA"></a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p class="address"></p>
+                                <p class="distance"></p>
+                                <p class="timeout"></p> 
+                            </div>  
+                        </div>
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_six.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_fifteen.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_ten.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <div class="shop_discribe">
+                        <div class="left_discribe">
+                            <div class="name_price_show">
+                                <p class="shopName"><a class="shopNameA" href="../views/shop_main_menu.html">山东杂粮煎饼店</a></p>
+                                <p class="minPrice"><a class="minPriceA"></a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p class="address"></p>
+                                <p class="distance"></p>
+                                <p class="timeout"></p> 
+                            </div>  
+                        </div>
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_six.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_eight.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <div class="shop_discribe">
+                        <div class="left_discribe">
+                            <div class="name_price_show">
+                                <p class="shopName"><a class="shopNameA" href="../views/shop_main_menu.html">麦当劳(人民广场店)</a></p>
+                                <p class="minPrice"><a class="minPriceA"></a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p class="address"></p>
+                                <p class="distance"></p>
+                                <p class="timeout"></p> 
+                            </div>  
+                        </div>
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_ten.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_five.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_twelve.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_eleven.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <div class="shop_discribe">
+                        <div class="left_discribe">
+                            <div class="name_price_show">
+                                <p class="shopName"><a class="shopNameA" href="../views/shop_main_menu.html">必胜客(人民中路店)</a></p>
+                                <p class="minPrice"><a class="minPriceA"></a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p class="address"></p>
+                                <p class="distance"></p>
+                                <p class="timeout"></p> 
+                            </div>  
+                        </div>
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <div class="shop_discribe">
+                        <div class="left_discribe">
+                            <div class="name_price_show">
+                                <p class="shopName"><a class="shopNameA" href="../views/shop_main_menu.html">纽约客</a></p>
+                                <p class="minPrice"><a class="minPriceA"></a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p class="address"></p>
+                                <p class="distance"></p>
+                                <p class="timeout"></p> 
+                            </div>  
+                        </div>
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <div class="shop_discribe">
+                        <div class="left_discribe">
+                            <div class="name_price_show">
+                                <p class="shopName"><a class="shopNameA" href="../views/shop_main_menu.html">华莱士(总店)</a></p>
+                                <p class="minPrice"><a class="minPriceA"></a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p class="address"></p>
+                                <p class="distance"></p>
+                                <p class="timeout"></p> 
+                            </div>  
+                        </div>
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">麻辣套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <div class="shop_discribe">
+                        <div class="left_discribe">
+                            <div class="name_price_show">
+                                <p class="shopName"><a class="shopNameA" href="../views/shop_main_menu.html">张三麻华莱士(2hao'dian)辣烫店</a></p>
+                                <p class="minPrice"><a class="minPriceA"></a></p>
+                            </div>
+                            <!-- 这是商家地址 -->
+                            <div class="address_show">
+                                <p class="address"></p>
+                                <p class="distance"></p>
+                                <p class="timeout"></p> 
+                            </div>  
+                        </div>
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="shop_overview">
+                    <div class="shop_discribe">
+                        <div class="left_discribe">
+                            <div class="name_price_show">
+                                <p class="shopName"><a href="../views/shop_main_menu.html">农家餐馆</a></p>
+                                <p class="minPrice"><a href="#">￥20起送</a></p>
+                            </div>
+                            <div class="address_show">
+                                <p>宝龙城市广场3楼33号</p><p>2.3km</p><p>23分钟</p> 
+                            </div>  
+                        </div>
+                        <div class="right_discribe">
+                            <ul class="specialty">
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_one.png" alt=""></span>
+                                        <p class="foodName">套餐1</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_two.png" alt=""></span>
+                                        <p class="foodName">套餐2</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_three.png" alt=""></span>
+                                        <p class="foodName">套餐3</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="some_specifity_food">
+                                        <span class="footImg"><img src="../public/img/food_menu/Food_four.png" alt=""></span>
+                                        <p class="foodName">套餐4</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div> 
+    </div>
+    <script type="text/javascript">
+        // 数据库拆线呢商家信息规则：前端展示了商家的姓名，根据 shopName关键字查询其他信息返回前端
+        // 1.页面加载时，从数据库获取到商家信息展示在界面
+        $(function(){
+            $.ajax({
+                url : '/menu',
+                type : 'post',
+                data : {
+                    shopName : $('.shopNameA').html(),
+                },
+                success : function(res,data){
+                    if(res.code == 666){
+                        // alert("商家信息如下：" + "店名:"+res.message1 + "起送金额:"+res.message2 + "地址:"+res.message3 + "距离："+res.message4 + "配送时间："+res.message5)
+                        // 将行家信息展示在htmlDOM中
+                        var pri = res.message2
+                        var add = res.message3
+                        var dist = res.message4
+                        var time = res.message5
+                        // alert("这是啥啊啊啊啊啊" + pri+add+dist+time)
+                        
+                        var minPrice = document.getElementsByClassName("minPriceA")[0]
+                        var address = document.getElementsByClassName("address")[0]
+                        var distance = document.getElementsByClassName("distance")[0]
+                        var timeout = document.getElementsByClassName("timeout")[0]
+                        minPrice.innerHTML = pri
+                        address.innerHTML = add
+                        distance.innerHTML = dist
+                        timeout.innerHTML = time
+
+                        // alert(minPrice.innerHTML + address.innerHTML + distance.innerHTML + timeout).innerHTML
+                        // console.log(minPrice + address + distance + timeout);
+                    }else if(res.code == 555){
+                        alert(res.message)
+                    }
+
+                },
+                error:function(err,data){
+                    alert("出错，请重试。")
+                }
+            })
+        })
+
+
+    </script>
+</body>
+</html>
